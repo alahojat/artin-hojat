@@ -1,0 +1,12 @@
+@layer base {
+  body {
+    min-height: 100vh;
+    @apply bg-chalk;
+    main {
+    }
+  }
+
+  #app {
+    min-height: 100vh;
+  }
+}
