@@ -1,7 +1,9 @@
 export const ArticlesPage = () => {
   return (
     <>
-      <h1>Here are all the articles</h1>
+      <section className="bg-ice p-4">
+        <h1>Here are all the articles</h1>
+      </section>
     </>
   );
 };

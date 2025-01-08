@@ -1,7 +1,9 @@
 export const PartnersPage = () => {
   return (
     <>
-      <h1>My partners are:</h1>
+      <section className="bg-slate p-4">
+        <h1>My partners are:</h1>
+      </section>
     </>
   );
 };

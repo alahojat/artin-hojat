@@ -1,7 +1,9 @@
 export const ConsultingPage = () => {
   return (
     <>
-      <h1>Consulting</h1>
+      <section className="bg-ice p-4">
+        <h1>Consulting</h1>
+      </section>
     </>
   );
 };
