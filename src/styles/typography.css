@@ -1,0 +1,26 @@
+@layer base {
+  .header {
+    @apply sm:heading-sm lg:heading-lg text-steel;
+    &.header-light {
+      @apply text-snow;
+    }
+  }
+  .subheader {
+    @apply sm:subheading-sm lg:subheading-lg text-steel;
+    &.subheader-light {
+      @apply text-snow;
+    }
+  }
+  .body {
+    @apply sm:body-sm lg:body-lg text-steel sm:my-4 lg:my-6;
+    &.body-light {
+      @apply text-snow;
+    }
+  }
+  .footer {
+    @apply sm:footer-sm lg:footer-lg text-steel;
+  }
+  .copyright {
+    @apply sm:copyright-sm lg:copyright-lg text-steel;
+  }
+}
