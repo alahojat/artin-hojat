@@ -1,0 +1,28 @@
+@layer components {
+  .button {
+    @apply font-zodiak text-snow bg-slate m-2 min-h-8 cursor-pointer content-center items-center rounded border border-transparent px-3 text-center text-base uppercase sm:min-w-16 lg:min-w-24;
+    &:hover {
+      @apply bg-midnight;
+    }
+    &:active {
+      @apply bg-slate text-steel;
+    }
+    &.button-secondary {
+      @apply text-snow bg-transparent;
+      &:hover {
+        @apply border-snow border border-solid;
+      }
+
+      &:active {
+        @apply bg-slate text-snow;
+      }
+    }
+  }
+
+  .input {
+    @apply bg-snow sm:subheading-sm lg:subheading-lg m-1 h-9 rounded sm:w-72 lg:w-96;
+    &:hover {
+      @apply bg-ice;
+    }
+  }
+}
