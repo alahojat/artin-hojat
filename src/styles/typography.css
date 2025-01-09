@@ -21,6 +21,17 @@
     @apply sm:footer-sm lg:footer-lg text-steel;
   }
   .copyright {
-    @apply sm:copyright-sm lg:copyright-lg text-steel;
+    @apply sm:copyright-sm lg:copyright-lg text-snow;
+  }
+  .a {
+    @apply text-sm;
+  }
+
+  .menu {
+    @apply sm:word-sm md:word-lg sm:text-orange md:text-steel;
+  }
+
+  label {
+    @apply text-snow sm:body-sm lg:body-lg mb-1 mt-2;
   }
 }
