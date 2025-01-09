@@ -40,11 +40,20 @@ export default {
         inter: ["Inter", "sans-serif"],
       },
       screens: {
-        sm: "320px",
+        sm: "300px",
         md: "768px",
         lg: "1024px",
         xl: "1280px",
         "2xl": "1536px",
+      },
+      animation: {
+        "marquee-start": "marquee-start 50s linear infinite",
+      },
+      keyframes: {
+        "marquee-start": {
+          "0%": { transform: "translateX(0)" },
+          "100%": { transform: "translateX(-100%)" },
+        },
       },
     },
   },
@@ -63,7 +72,6 @@ export default {
           fontFamily: theme("fontFamily.zodiak"),
           fontSize: "4rem",
           fontWeight: "bold",
-          margin: "2rem",
         },
         ".subheading-lg": {
           fontFamily: theme("fontFamily.zodiak"),
@@ -73,7 +81,8 @@ export default {
         ".subheading-sm": {
           fontFamily: theme("fontFamily.zodiak"),
           fontSize: "3rem",
-          fontWeight: "regular",
+          fontWeight: "bold",
+          lineHeight: "110%",
         },
         ".body-lg": {
           fontFamily: theme("fontFamily.plus-jakarta-sans"),
@@ -87,27 +96,27 @@ export default {
         },
         ".word-lg": {
           fontFamily: theme("fontFamily.zodiak"),
-          fontSize: "4rem",
-          fontWeight: "bold",
+          fontSize: "1.2rem",
+          fontWeight: "400",
         },
         ".word-sm": {
           fontFamily: theme("fontFamily.zodiak"),
-          fontSize: "4rem",
-          fontWeight: "bold",
+          fontSize: "1.6rem",
+          fontWeight: "800",
         },
         ".footer-sm": {
           fontFamily: theme("fontFamily.zodiak"),
-          fontSize: "1rem",
+          fontSize: "0.8rem",
           fontWeight: "400",
         },
         ".footer-lg": {
           fontFamily: theme("fontFamily.zodiak"),
-          fontSize: "1.2rem",
+          fontSize: "2rem",
           fontWeight: "400",
         },
         ".copyright-sm": {
           fontFamily: theme("fontFamily.zodiak"),
-          fontSize: "0.8rem",
+          fontSize: "0.7rem",
           fontWeight: "400",
         },
         ".copyright-lg": {
