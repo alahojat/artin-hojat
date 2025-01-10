@@ -20,9 +20,13 @@
   }
 
   .input {
-    @apply bg-snow sm:subheading-sm lg:subheading-lg m-1 h-9 rounded sm:w-72 lg:w-96;
+    @apply bg-snow sm:body-sm lg:body-lg m-1 h-9 rounded p-2 sm:w-60 lg:w-96;
     &:hover {
       @apply bg-ice;
     }
+  }
+
+  .textarea {
+    @apply bg-snow h-full w-full resize-none rounded p-3 text-base;
   }
 }
