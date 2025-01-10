@@ -34,4 +34,12 @@
   label {
     @apply text-snow sm:body-sm lg:body-lg mb-1 mt-2;
   }
+
+  .error-text {
+    @apply sm:body-sm lg:body-lg text-red-600;
+  }
+
+  .success {
+    @apply sm:body-sm lg:body-lg text-snow;
+  }
 }
