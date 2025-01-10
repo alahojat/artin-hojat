@@ -6,7 +6,7 @@
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     -webkit-text-size-adjust: 100%;
-    @apply bg-chalk;
+    @apply bg-ice;
   }
   #root {
     display: flex;
@@ -19,5 +19,9 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+  }
+
+  .hero {
+    background-image: url("./assets/artin-melwin.jpg");
   }
 }

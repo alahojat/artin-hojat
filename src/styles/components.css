@@ -29,4 +29,8 @@
   .textarea {
     @apply bg-snow h-full w-full resize-none rounded p-3 text-base;
   }
+
+  .hero {
+    @apply flex min-h-screen w-full flex-col items-center justify-center bg-cover bg-center bg-no-repeat p-5 text-center text-white lg:bg-top;
+  }
 }
