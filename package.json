@@ -11,6 +11,7 @@
   },
   "dependencies": {
     "@emailjs/browser": "^4.4.1",
+    "@tailwindcss/aspect-ratio": "^0.4.2",
     "aws-amplify": "^6.11.0",
     "formik": "^2.4.6",
     "postcss-nesting": "^13.0.1",
