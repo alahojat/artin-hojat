@@ -28,7 +28,7 @@ export const Menu = () => {
   return (
     <>
       <>
-        <header className="absolute left-0 top-0 z-20 w-full md:flex md:h-16 md:items-center md:justify-between md:px-8 md:pt-8">
+        <header className="z-20 w-full sm:absolute sm:left-0 sm:top-0 md:flex md:h-16 md:items-center md:justify-between md:bg-chalk md:px-8 md:py-2">
           <section className="mr-5 mt-5 flex justify-end md:hidden">
             <div
               className={`menu-button ${menuIsOpen ? "menu-open" : ""}`}
@@ -43,7 +43,7 @@ export const Menu = () => {
 
             {menuIsOpen && (
               <div
-                className="bg-steel fixed inset-0 z-10 bg-opacity-90"
+                className="fixed inset-0 z-10 bg-steel bg-opacity-90"
                 onClick={toggleMenu}
               ></div>
             )}
@@ -56,7 +56,7 @@ export const Menu = () => {
           >
             <div className="m-4 flex justify-end md:hidden">
               <div
-                className="border-orange flex h-16 w-16 items-center justify-center rounded-full border-4"
+                className="flex h-16 w-16 items-center justify-center rounded-full border-4 border-orange"
                 onClick={toggleMenu}
               ></div>
             </div>
@@ -110,7 +110,7 @@ export const Menu = () => {
             <img
               src={logo}
               alt={"artin hojat logo"}
-              className="hidden h-24 w-24 cursor-pointer md:block"
+              className="hidden h-16 w-16 cursor-pointer md:block"
             />
           </nav>
         </header>
