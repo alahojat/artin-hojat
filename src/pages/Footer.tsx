@@ -7,7 +7,7 @@ import { ScrollingBanner } from "../components/ScrollingBanner";
 
 export const Footer = () => {
   return (
-    <footer className="bg-orange flex h-[550px] flex-col lg:h-[420px] lg:w-full lg:pb-4">
+    <footer className="flex h-[550px] flex-col bg-orange lg:h-[400px] lg:w-full lg:pb-4">
       <div className="flex-shrink-0">
         <ScrollingBanner />
       </div>
