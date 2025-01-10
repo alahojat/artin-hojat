@@ -1,6 +1,7 @@
 /** @type {import('tailwindcss').Config} */
 
 const plugin = require("tailwindcss/plugin");
+const aspectRatio = require("@tailwindcss/aspect-ratio");
 
 export default {
   content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
@@ -75,8 +76,8 @@ export default {
         },
         ".subheading-lg": {
           fontFamily: theme("fontFamily.zodiak"),
-          fontSize: "2.5rem",
-          fontWeight: "400",
+          fontSize: "3rem",
+          fontWeight: "600",
         },
         ".subheading-sm": {
           fontFamily: theme("fontFamily.zodiak"),
@@ -84,9 +85,32 @@ export default {
           fontWeight: "bold",
           lineHeight: "110%",
         },
+        ".title-sm": {
+          fontFamily: theme("fontFamily.zodiak"),
+          fontSize: "1.5rem",
+          fontWeight: "400",
+        },
+        ".title-lg": {
+          fontFamily: theme("fontFamily.zodiak"),
+          fontSize: "2rem",
+          fontWeight: "600",
+          lineHeight: "100%",
+        },
+        ".player-title-lg": {
+          fontFamily: theme("fontFamily.zodiak"),
+          fontSize: "2rem",
+          fontWeight: "bold",
+          lineHeight: "110%",
+        },
+        ".player-title-sm": {
+          fontFamily: theme("fontFamily.zodiak"),
+          fontSize: "1.5rem",
+          fontWeight: "bold",
+          lineHeight: "110%",
+        },
         ".body-lg": {
           fontFamily: theme("fontFamily.plus-jakarta-sans"),
-          fontSize: "1.25rem",
+          fontSize: "1.2rem",
           fontWeight: "400",
         },
         ".body-sm": {
@@ -96,12 +120,12 @@ export default {
         },
         ".word-lg": {
           fontFamily: theme("fontFamily.zodiak"),
-          fontSize: "1.2rem",
+          fontSize: "1rem",
           fontWeight: "400",
         },
         ".word-sm": {
           fontFamily: theme("fontFamily.zodiak"),
-          fontSize: "1.6rem",
+          fontSize: "1.8rem",
           fontWeight: "800",
         },
         ".footer-sm": {
@@ -111,7 +135,7 @@ export default {
         },
         ".footer-lg": {
           fontFamily: theme("fontFamily.zodiak"),
-          fontSize: "2rem",
+          fontSize: "1.3rem",
           fontWeight: "400",
         },
         ".copyright-sm": {
@@ -126,5 +150,6 @@ export default {
         },
       });
     }),
+    aspectRatio,
   ],
 };
