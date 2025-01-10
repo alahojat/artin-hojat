@@ -1,30 +1,33 @@
 @layer base {
   .header {
-    @apply sm:heading-sm lg:heading-lg text-steel;
+    @apply text-steel sm:heading-sm lg:heading-lg;
     &.header-light {
       @apply text-snow;
     }
   }
   .subheader {
-    @apply sm:subheading-sm lg:subheading-lg text-steel;
+    @apply text-steel sm:subheading-sm lg:subheading-lg;
     &.subheader-light {
       @apply text-snow;
     }
   }
+  .title {
+    @apply sm:title-sm md:title-lg pt-2 text-steel;
+  }
   .body {
-    @apply sm:body-sm lg:body-lg text-steel sm:my-4 lg:my-6;
+    @apply text-steel sm:body-sm lg:body-lg sm:my-4 lg:my-6;
     &.body-light {
       @apply text-snow;
     }
   }
   .footer {
-    @apply sm:footer-sm lg:footer-lg text-steel;
+    @apply text-steel sm:footer-sm lg:footer-lg;
   }
   .copyright {
-    @apply sm:copyright-sm lg:copyright-lg text-snow;
+    @apply text-snow sm:copyright-sm lg:copyright-lg;
   }
   .a {
-    @apply text-sm;
+    @apply text-sm lg:footer-lg;
   }
 
   .menu {
@@ -32,14 +35,18 @@
   }
 
   label {
-    @apply text-snow sm:body-sm lg:body-lg mb-1 mt-2;
+    @apply mb-1 mt-2 text-snow sm:body-sm lg:body-lg;
   }
 
   .error-text {
-    @apply sm:body-sm lg:body-lg text-red-600;
+    @apply text-red-600 sm:body-sm lg:body-lg;
   }
 
   .success {
-    @apply sm:body-sm lg:body-lg text-snow;
+    @apply text-snow sm:body-sm lg:body-lg;
+  }
+
+  .player {
+    @apply sm:player-title-sm lg:player-title-lg text-snow;
   }
 }
