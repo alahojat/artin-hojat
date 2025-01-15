@@ -56,9 +56,11 @@ export const ContactForm = () => {
         onSubmit={handleSubmit}
       >
         {({ isSubmitting, resetForm, status }) => (
-          <Form className="contact-form">
-            <fieldset>
-              <legend className="subheader subheader-light">Contact Us</legend>
+          <Form>
+            <fieldset className="col">
+              <legend className="subheading subheading-light">
+                Contact us
+              </legend>
 
               <label className="label" htmlFor="user_name">
                 Name
@@ -107,7 +109,7 @@ export const ContactForm = () => {
                 className="error-text"
               />
 
-              <div className="flex flex-row">
+              <div className="row items-center justify-center">
                 <button
                   className="button button-secondary"
                   type="button"
