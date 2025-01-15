@@ -1,5 +1,7 @@
 /** @type {import('tailwindcss').Config} */
 
+import { transform } from "esbuild";
+
 const plugin = require("tailwindcss/plugin");
 const aspectRatio = require("@tailwindcss/aspect-ratio");
 
@@ -67,55 +69,57 @@ export default {
           fontWeight: "normal",
           margin: "2rem",
           fontStyle: "italic",
-          lineHeight: "auto",
+          lineHeight: "100%",
         },
         ".heading-sm": {
           fontFamily: theme("fontFamily.zodiak"),
           fontSize: "4rem",
           fontWeight: "bold",
+          lineHeight: "60px",
         },
         ".subheading-lg": {
           fontFamily: theme("fontFamily.zodiak"),
-          fontSize: "3rem",
+          fontSize: "4rem",
           fontWeight: "600",
         },
         ".subheading-sm": {
           fontFamily: theme("fontFamily.zodiak"),
-          fontSize: "3rem",
+          fontSize: "2.8rem",
           fontWeight: "bold",
-          lineHeight: "110%",
+          lineHeight: "100%",
         },
-        ".title-sm": {
-          fontFamily: theme("fontFamily.zodiak"),
-          fontSize: "1.5rem",
-          fontWeight: "400",
-        },
-        ".title-lg": {
+        ".subheading-alt-lg": {
           fontFamily: theme("fontFamily.zodiak"),
           fontSize: "2rem",
           fontWeight: "600",
           lineHeight: "100%",
         },
-        ".player-title-lg": {
-          fontFamily: theme("fontFamily.zodiak"),
-          fontSize: "2rem",
-          fontWeight: "bold",
-          lineHeight: "110%",
-        },
-        ".player-title-sm": {
+        ".subheading-alt-sm": {
           fontFamily: theme("fontFamily.zodiak"),
           fontSize: "1.5rem",
-          fontWeight: "bold",
-          lineHeight: "110%",
+          fontWeight: "400",
+          lineHeight: "100%",
         },
         ".body-lg": {
           fontFamily: theme("fontFamily.plus-jakarta-sans"),
           fontSize: "1.2rem",
           fontWeight: "400",
+          lineHeight: "120%",
         },
         ".body-sm": {
           fontFamily: theme("fontFamily.plus-jakarta-sans"),
           fontSize: "1rem",
+          fontWeight: "400",
+          lineHeight: "150%",
+        },
+        ".body-alt-lg": {
+          fontFamily: theme("fontFamily.plus-jakarta-sans"),
+          fontSize: "1rem",
+          fontWeight: "400",
+        },
+        ".body-alt-sm": {
+          fontFamily: theme("fontFamily.plus-jakarta-sans"),
+          fontSize: "0.8rem",
           fontWeight: "400",
         },
         ".word-lg": {
@@ -142,10 +146,21 @@ export default {
           fontFamily: theme("fontFamily.zodiak"),
           fontSize: "0.7rem",
           fontWeight: "400",
+          lineHeight: "150%",
         },
         ".copyright-lg": {
           fontFamily: theme("fontFamily.zodiak"),
           fontSize: "1rem",
+          fontWeight: "400",
+        },
+        ".photocred-sm": {
+          fontFamily: theme("fontFamily.plus-jakarta-sans"),
+          fontSize: "0.5rem",
+          fontWeight: "400",
+        },
+        ".photocred-lg": {
+          fontFamily: theme("fontFamily.plus-jakarta-sans"),
+          fontSize: "0.8rem",
           fontWeight: "400",
         },
       });
