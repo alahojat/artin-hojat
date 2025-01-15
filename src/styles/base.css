@@ -1,4 +1,7 @@
 @layer base {
+  html {
+    scroll-behavior: smooth;
+  }
   body {
     min-height: 100vh;
     font-synthesis: none;
@@ -6,7 +9,6 @@
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     -webkit-text-size-adjust: 100%;
-    @apply bg-ice;
   }
   #root {
     display: flex;
@@ -21,7 +23,7 @@
     align-items: center;
   }
 
-  .hero {
-    background-image: url("./assets/artin-melwin.jpg");
+  .base {
+    @apply w-full flex-grow items-center pt-24 sm:px-4 sm:pb-16 lg:px-6 lg:pb-16 lg:pt-32;
   }
 }
