@@ -1,4 +1,4 @@
-import circleLogo from "../assets/artin-hojat-circle.svg";
+import circleLogo from "../assets/site-logo/artin-hojat-circle.svg";
 import instagram from "../assets/icons/instagram-svgrepo-com.svg";
 import linkedIn from "../assets/icons/linkedin-svgrepo-com.svg";
 import tikTok from "../assets/icons/tiktok-logo-thin-svgrepo-com.svg";
@@ -7,12 +7,12 @@ import { ScrollingBanner } from "../components/ScrollingBanner";
 
 export const Footer = () => {
   return (
-    <footer className="flex h-[550px] flex-col bg-orange lg:h-[400px] lg:w-full lg:pb-4">
+    <footer className="col h-[550px] bg-orange lg:h-[400px] lg:w-full lg:pb-4">
       <div className="flex-shrink-0">
         <ScrollingBanner />
       </div>
 
-      <section className="mx-4 flex flex-1 items-center justify-around sm:flex-col md:flex md:gap-12 lg:flex-row">
+      <section className="sm:col lg:row mx-4 flex-1 items-center justify-around md:flex md:gap-12">
         <div className="my-8 flex items-center justify-center">
           <img
             className="md:w-30 h-auto sm:w-28 lg:w-40"
