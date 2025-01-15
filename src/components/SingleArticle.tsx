@@ -3,16 +3,17 @@ import article from "../assets/article.jpg";
 export const SingleArticle = () => {
   return (
     <article>
-      <div className="m-8">
-        <h2 className="title">The Intersection of Sports and Anime</h2>
-        <p className="body m-0">2025-01-02</p>
-        <div className="lg:flex lg:flex-row lg:gap-4">
+      <div>
+        <h2 className="subheading">The Intersection of Sports and Anime</h2>
+        <p className="body mb-0">2025-01-02</p>
+        <div className="lg:row lg:gap-4">
           <img
             src={article}
             alt="article alt"
-            className="w-full object-cover sm:h-52"
+            className="w-full object-cover py-2 sm:h-52"
           />
-          <section className="m-4">
+          <span className="photocred">Photo by: name</span>
+          <section className="my-4">
             <p className="body">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
               eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut

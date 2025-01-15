@@ -13,13 +13,13 @@ export const ArticleCards = () => {
     >
       {articles.map((article) => (
         <div key={article.id} className="article-card mt-6 p-2">
-          <p className="body m-0">{article.dateCreated}</p>
+          <p className="body m-0 pb-2">{article.dateCreated}</p>
           <img
             src={article.img}
             alt={article.title}
             className="w-full object-cover sm:h-52 lg:h-72"
           />
-          <h3 className="title">{article.title}</h3>
+          <h3 className="subheading-alt">{article.title}</h3>
           <p className="body">{article.body}</p>
         </div>
       ))}

@@ -1,16 +1,16 @@
 @layer components {
   .button {
-    @apply font-zodiak text-snow bg-slate m-2 min-h-8 cursor-pointer content-center items-center rounded border border-transparent px-3 text-center text-base uppercase sm:min-w-16 lg:min-w-24;
+    @apply m-4 min-h-8 cursor-pointer content-center items-center rounded border border-transparent bg-midnight px-3 text-center font-zodiak text-base uppercase text-snow sm:min-w-16 lg:min-w-24;
     &:hover {
-      @apply bg-midnight;
+      @apply bg-slate;
     }
     &:active {
       @apply bg-slate text-steel;
     }
     &.button-secondary {
-      @apply text-snow bg-transparent;
+      @apply bg-transparent text-snow;
       &:hover {
-        @apply border-snow border border-solid;
+        @apply border border-solid border-snow;
       }
 
       &:active {
@@ -20,17 +20,25 @@
   }
 
   .input {
-    @apply bg-snow sm:body-sm lg:body-lg m-1 h-9 rounded p-2 sm:w-60 lg:w-96;
+    @apply m-1 h-9 rounded bg-snow p-2 sm:body-sm lg:body-lg sm:w-64 md:w-80 lg:w-96;
     &:hover {
       @apply bg-ice;
     }
   }
 
   .textarea {
-    @apply bg-snow h-full w-full resize-none rounded p-3 text-base;
+    @apply m-1 h-full resize-none rounded bg-snow p-3 text-base sm:w-64 md:w-80 lg:w-96;
   }
 
   .hero {
     @apply flex min-h-screen w-full flex-col items-center justify-center bg-cover bg-center bg-no-repeat p-5 text-center text-white lg:bg-top;
+  }
+
+  .row {
+    @apply flex flex-row;
+  }
+
+  .col {
+    @apply flex flex-col;
   }
 }

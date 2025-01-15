@@ -31,17 +31,17 @@ export const ScrollingBanner = () => {
   return (
     <div
       ref={handleRef}
-      className="relative mt-4 h-[65px] w-full overflow-hidden bg-steel"
+      className="relative mt-4 w-full overflow-hidden bg-steel sm:h-[55px] lg:h-[95px]"
     >
       <div
-        className={`absolute mt-2 whitespace-nowrap transition-transform ${
+        className={`absolute whitespace-nowrap transition-transform ${
           isInView ? "animate-marquee-start" : ""
         }`}
       >
-        <h2 className="subheader subheader-light inline-block uppercase">
+        <h2 className="subheading subheading-light inline-block uppercase">
           Performance Optimization Performance Optimization
         </h2>
-        <h2 className="subheader subheader-light inline-block uppercase">
+        <h2 className="subheading subheading-light inline-block uppercase">
           Performance Optimization Performance Optimization
         </h2>
       </div>
