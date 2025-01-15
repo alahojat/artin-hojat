@@ -1,17 +1,14 @@
-import { Input } from "../components/StyledInput";
+import { ContactForm } from "../components/ContactForm";
 
 export const ContactPage = () => {
   return (
     <>
-      <section className="bg-steel p-4">
-        <h2 className="subheader subheader-light">How to contact me</h2>
+      <section className="bg-steel max-w-7xl p-8 pt-24">
         <p className="body body-light">
           Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
-          minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-          aliquip ex ea commodo consequat.
+          eiusmod tempor incididunt ut labore et dolore magna aliqua.
         </p>
-        <Input></Input>
+        <ContactForm></ContactForm>
       </section>
     </>
   );

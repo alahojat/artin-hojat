@@ -9,6 +9,7 @@ import { ConsultingPage } from "./pages/ConsultingPage";
 import { PartnersPage } from "./pages/PartnersPage";
 import { ContactPage } from "./pages/ContactPage";
 import { PlayerPage } from "./pages/PlayerPage";
+import { SingleArticlesPage } from "./pages/SingleArticlesPage";
 
 export const router = createBrowserRouter([
   {
@@ -31,6 +32,10 @@ export const router = createBrowserRouter([
       {
         path: "/articles",
         element: <ArticlesPage></ArticlesPage>,
+      },
+      {
+        path: "/articles/singlearticle",
+        element: <SingleArticlesPage></SingleArticlesPage>,
       },
       {
         path: "/merits",

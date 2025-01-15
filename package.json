@@ -10,11 +10,15 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@emailjs/browser": "^4.4.1",
+    "@tailwindcss/aspect-ratio": "^0.4.2",
     "aws-amplify": "^6.11.0",
+    "formik": "^2.4.6",
     "postcss-nesting": "^13.0.1",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
-    "react-router-dom": "^7.1.1"
+    "react-router-dom": "^7.1.1",
+    "yup": "^1.6.1"
   },
   "devDependencies": {
     "@aws-amplify/backend": "^1.11.0",

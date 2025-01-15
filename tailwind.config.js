@@ -1,6 +1,7 @@
 /** @type {import('tailwindcss').Config} */
 
 const plugin = require("tailwindcss/plugin");
+const aspectRatio = require("@tailwindcss/aspect-ratio");
 
 export default {
   content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
@@ -40,11 +41,20 @@ export default {
         inter: ["Inter", "sans-serif"],
       },
       screens: {
-        sm: "320px",
+        sm: "300px",
         md: "768px",
         lg: "1024px",
         xl: "1280px",
         "2xl": "1536px",
+      },
+      animation: {
+        "marquee-start": "marquee-start 50s linear infinite",
+      },
+      keyframes: {
+        "marquee-start": {
+          "0%": { transform: "translateX(0)" },
+          "100%": { transform: "translateX(-100%)" },
+        },
       },
     },
   },
@@ -63,21 +73,44 @@ export default {
           fontFamily: theme("fontFamily.zodiak"),
           fontSize: "4rem",
           fontWeight: "bold",
-          margin: "2rem",
         },
         ".subheading-lg": {
           fontFamily: theme("fontFamily.zodiak"),
-          fontSize: "2.5rem",
-          fontWeight: "400",
+          fontSize: "3rem",
+          fontWeight: "600",
         },
         ".subheading-sm": {
           fontFamily: theme("fontFamily.zodiak"),
           fontSize: "3rem",
-          fontWeight: "regular",
+          fontWeight: "bold",
+          lineHeight: "110%",
+        },
+        ".title-sm": {
+          fontFamily: theme("fontFamily.zodiak"),
+          fontSize: "1.5rem",
+          fontWeight: "400",
+        },
+        ".title-lg": {
+          fontFamily: theme("fontFamily.zodiak"),
+          fontSize: "2rem",
+          fontWeight: "600",
+          lineHeight: "100%",
+        },
+        ".player-title-lg": {
+          fontFamily: theme("fontFamily.zodiak"),
+          fontSize: "2rem",
+          fontWeight: "bold",
+          lineHeight: "110%",
+        },
+        ".player-title-sm": {
+          fontFamily: theme("fontFamily.zodiak"),
+          fontSize: "1.5rem",
+          fontWeight: "bold",
+          lineHeight: "110%",
         },
         ".body-lg": {
           fontFamily: theme("fontFamily.plus-jakarta-sans"),
-          fontSize: "1.25rem",
+          fontSize: "1.2rem",
           fontWeight: "400",
         },
         ".body-sm": {
@@ -87,27 +120,27 @@ export default {
         },
         ".word-lg": {
           fontFamily: theme("fontFamily.zodiak"),
-          fontSize: "4rem",
-          fontWeight: "bold",
+          fontSize: "1rem",
+          fontWeight: "400",
         },
         ".word-sm": {
           fontFamily: theme("fontFamily.zodiak"),
-          fontSize: "4rem",
-          fontWeight: "bold",
+          fontSize: "1.8rem",
+          fontWeight: "800",
         },
         ".footer-sm": {
           fontFamily: theme("fontFamily.zodiak"),
-          fontSize: "1rem",
+          fontSize: "0.8rem",
           fontWeight: "400",
         },
         ".footer-lg": {
           fontFamily: theme("fontFamily.zodiak"),
-          fontSize: "1.2rem",
+          fontSize: "1.3rem",
           fontWeight: "400",
         },
         ".copyright-sm": {
           fontFamily: theme("fontFamily.zodiak"),
-          fontSize: "0.8rem",
+          fontSize: "0.7rem",
           fontWeight: "400",
         },
         ".copyright-lg": {
@@ -117,5 +150,6 @@ export default {
         },
       });
     }),
+    aspectRatio,
   ],
 };

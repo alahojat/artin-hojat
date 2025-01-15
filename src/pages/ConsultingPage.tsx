@@ -1,8 +1,8 @@
 export const ConsultingPage = () => {
   return (
     <>
-      <section className="bg-ice p-4">
-        <h1>Consulting</h1>
+      <section className="base bg-ice">
+        <h2 className="subheading">Consulting</h2>
       </section>
     </>
   );

@@ -1,26 +1,57 @@
 @layer base {
-  .header {
-    @apply sm:heading-sm lg:heading-lg text-steel;
+  .heading {
+    @apply text-steel sm:heading-sm lg:heading-lg sm:my-2 lg:mx-0 lg:my-4;
     &.header-light {
       @apply text-snow;
     }
   }
-  .subheader {
-    @apply sm:subheading-sm lg:subheading-lg text-steel;
-    &.subheader-light {
+  .subheading {
+    @apply text-steel sm:subheading-sm lg:subheading-lg sm:my-2 lg:my-4;
+    &.subheading-light {
+      @apply text-snow;
+    }
+  }
+  .subheading-alt {
+    @apply sm:subheading-alt-sm md:subheading-alt-lg pt-2 text-steel sm:my-2 lg:my-4;
+    &.subheading-alt-light {
       @apply text-snow;
     }
   }
   .body {
-    @apply sm:body-sm lg:body-lg text-steel sm:my-4 lg:my-6;
+    @apply text-steel sm:body-sm lg:body-lg sm:my-4 lg:my-6;
     &.body-light {
       @apply text-snow;
     }
   }
   .footer {
-    @apply sm:footer-sm lg:footer-lg text-steel;
+    @apply m-2 text-steel sm:footer-sm lg:footer-lg;
   }
   .copyright {
-    @apply sm:copyright-sm lg:copyright-lg text-steel;
+    @apply m-2 text-snow sm:copyright-sm lg:copyright-lg;
+  }
+  .photocred {
+    @apply sm:photocred-sm lg:photocred-lg text-steel;
+    &.photocred-light {
+      @apply text-snow;
+    }
+  }
+  .a {
+    @apply text-sm lg:footer-lg;
+  }
+
+  .menu {
+    @apply sm:word-sm md:word-lg sm:text-orange md:text-steel;
+  }
+
+  label {
+    @apply mb-1 mt-2 text-snow sm:body-sm lg:body-lg;
+  }
+
+  .error-text {
+    @apply text-red-600 sm:body-sm lg:body-lg;
+  }
+
+  .success {
+    @apply text-snow sm:body-sm lg:body-lg;
   }
 }

@@ -1,8 +1,11 @@
+import { ArticleCards } from "../components/ArticleCards";
+
 export const ArticlesPage = () => {
   return (
     <>
-      <section className="bg-ice p-4">
-        <h1>Here are all the articles</h1>
+      <section className="base bg-ice">
+        <h2 className="subheading">The Art in Science</h2>
+        <ArticleCards></ArticleCards>
       </section>
     </>
   );
