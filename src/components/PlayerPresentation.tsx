@@ -16,11 +16,16 @@ export const PlayerPresentation = () => {
                   />
                 </div>
 
-                <div className="absolute inset-0 flex flex-col items-center justify-center bg-steel bg-opacity-80 p-4 opacity-0 transition-opacity group-hover:opacity-100">
-                  <h2 className="player">{player.title}</h2>
+                <div className="col absolute inset-0 items-center justify-center bg-steel bg-opacity-80 p-4 opacity-0 transition-opacity duration-300 ease-in-out group-hover:opacity-100">
+                  <h2 className="subheading-alt subheading-alt-light">
+                    {player.title}
+                  </h2>
                   <p className="body body-light text-center text-snow">
                     {player.description}
                   </p>
+                  <span className="photocred photocred-light absolute bottom-2 right-2">
+                    Photo: {player.photographer}
+                  </span>
                 </div>
               </div>
             </div>
