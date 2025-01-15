@@ -1,18 +1,21 @@
 @layer base {
-  .header {
-    @apply text-steel sm:heading-sm lg:heading-lg;
+  .heading {
+    @apply text-steel sm:heading-sm lg:heading-lg sm:my-2 lg:mx-0 lg:my-4;
     &.header-light {
       @apply text-snow;
     }
   }
-  .subheader {
-    @apply text-steel sm:subheading-sm lg:subheading-lg;
-    &.subheader-light {
+  .subheading {
+    @apply text-steel sm:subheading-sm lg:subheading-lg sm:my-2 lg:my-4;
+    &.subheading-light {
       @apply text-snow;
     }
   }
-  .title {
-    @apply sm:title-sm md:title-lg pt-2 text-steel;
+  .subheading-alt {
+    @apply sm:subheading-alt-sm md:subheading-alt-lg pt-2 text-steel sm:my-2 lg:my-4;
+    &.subheading-alt-light {
+      @apply text-snow;
+    }
   }
   .body {
     @apply text-steel sm:body-sm lg:body-lg sm:my-4 lg:my-6;
@@ -21,10 +24,16 @@
     }
   }
   .footer {
-    @apply text-steel sm:footer-sm lg:footer-lg;
+    @apply m-2 text-steel sm:footer-sm lg:footer-lg;
   }
   .copyright {
-    @apply text-snow sm:copyright-sm lg:copyright-lg;
+    @apply m-2 text-snow sm:copyright-sm lg:copyright-lg;
+  }
+  .photocred {
+    @apply sm:photocred-sm lg:photocred-lg text-steel;
+    &.photocred-light {
+      @apply text-snow;
+    }
   }
   .a {
     @apply text-sm lg:footer-lg;
@@ -44,9 +53,5 @@
 
   .success {
     @apply text-snow sm:body-sm lg:body-lg;
-  }
-
-  .player {
-    @apply sm:player-title-sm lg:player-title-lg text-snow;
   }
 }
