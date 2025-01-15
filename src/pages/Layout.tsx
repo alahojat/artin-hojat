@@ -21,7 +21,7 @@ export const Layout = () => {
       ) : (
         <>
           <Menu />
-          <main className="header-sm">{error ? <NotFound /> : <Outlet />}</main>
+          <main>{error ? <NotFound /> : <Outlet />}</main>
           <Footer />
         </>
       )}
