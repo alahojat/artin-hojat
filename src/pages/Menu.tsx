@@ -56,7 +56,7 @@ export const Menu = () => {
           >
             <div className="m-4 flex justify-end md:hidden">
               <div
-                className="flex h-16 w-16 items-center justify-center"
+                className="flex h-16 w-16 items-center justify-center rounded-full border-4 border-orange"
                 onClick={toggleMenu}
               ></div>
             </div>
