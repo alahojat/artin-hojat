@@ -1,4 +1,5 @@
 import { IArticlesResponse } from "../models/IArticles";
+import parse from "html-react-parser";
 
 interface IDisplayArticlesProps {
   articles: IArticlesResponse;
@@ -27,7 +28,7 @@ export const ArticleCards = ({ articles }: IDisplayArticlesProps) => {
           <h3 onClick={handleArticleClick} className="subheading-alt">
             {article.title.rendered}
           </h3>
-          <p className="body">{article.excerpt.rendered}</p>
+          <p className="body">{parse(article.excerpt.rendered)}</p>
         </div>
       ))}
     </section>
