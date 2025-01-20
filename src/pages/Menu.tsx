@@ -28,7 +28,7 @@ export const Menu = () => {
   return (
     <>
       <>
-        <header className="z-20 w-full sm:absolute sm:left-0 sm:top-0 md:flex md:h-20 md:items-center md:justify-between md:bg-snow md:px-8 md:py-2">
+        <header className="z-20 w-full sm:absolute sm:left-0 sm:top-0 md:fixed md:flex md:h-16 md:items-center md:justify-between md:bg-snow md:px-8 md:py-2">
           <section className="mr-5 mt-5 flex justify-end md:hidden">
             <div
               className={`menu-button ${menuIsOpen ? "menu-open" : ""}`}
@@ -61,40 +61,10 @@ export const Menu = () => {
               ></div>
             </div>
 
-            <ul className="menu md:row justify-evenly p-4 sm:text-right md:flex md:items-start md:justify-start md:gap-4 md:text-left lg:gap-12">
-              <li>
-                <NavLink to={"/"} onClick={handleNavLinkClick}>
-                  Home
-                </NavLink>
-              </li>
-              <li>
-                <NavLink to={"/about"} onClick={handleNavLinkClick}>
-                  About
-                </NavLink>
-              </li>
-              <li>
-                <NavLink to={"/contact"} onClick={handleNavLinkClick}>
-                  Contact
-                </NavLink>
-              </li>
+            <ul className="menu overflow-x-auto p-4 sm:text-right md:flex md:flex-wrap md:items-start md:gap-4 md:overflow-visible md:text-left lg:gap-10">
               <li>
                 <NavLink to={"/articles"} onClick={handleNavLinkClick}>
                   The art in Science
-                </NavLink>
-              </li>
-              <li>
-                <NavLink to={"/merits"} onClick={handleNavLinkClick}>
-                  Merits
-                </NavLink>
-              </li>
-              <li>
-                <NavLink to={"/consulting"} onClick={handleNavLinkClick}>
-                  Consulting
-                </NavLink>
-              </li>
-              <li>
-                <NavLink to={"/partners"} onClick={handleNavLinkClick}>
-                  Brands
                 </NavLink>
               </li>
               <li>
@@ -102,16 +72,50 @@ export const Menu = () => {
                   to={"/player-optimization"}
                   onClick={handleNavLinkClick}
                 >
-                  Players
+                  Player Optimization
+                </NavLink>
+              </li>
+              <li>
+                <NavLink to={"/contact"} onClick={handleNavLinkClick}>
+                  Contact
+                </NavLink>
+              </li>
+
+              <li>
+                <NavLink to={"/merits"} onClick={handleNavLinkClick}>
+                  Merits
+                </NavLink>
+              </li>
+
+              <li>
+                <NavLink to={"/partners"} onClick={handleNavLinkClick}>
+                  Partners
+                </NavLink>
+              </li>
+              <li>
+                <NavLink to={"/about"} onClick={handleNavLinkClick}>
+                  About
                 </NavLink>
               </li>
             </ul>
 
-            <img
-              src={logo}
-              alt={"artin hojat logo"}
-              className="ml-4 hidden h-16 w-16 cursor-pointer md:block"
-            />
+            <a
+              href="/"
+              onClick={(e) => {
+                if (menuIsOpen) {
+                  e.preventDefault();
+                  toggleMenu();
+                } else {
+                  handleNavLinkClick();
+                }
+              }}
+            >
+              <img
+                src={logo}
+                alt={"artin hojat logo"}
+                className="ml-4 hidden h-16 w-16 cursor-pointer md:block"
+              />
+            </a>
           </nav>
         </header>
       </>
