@@ -5,7 +5,6 @@ import { Layout } from "./pages/Layout";
 import { AboutPage } from "./pages/AboutPage";
 import { ArticlesPage } from "./pages/ArticlesPage";
 import { MeritsPage } from "./pages/MeritsPage";
-import { ConsultingPage } from "./pages/ConsultingPage";
 import { PartnersPage } from "./pages/PartnersPage";
 import { ContactPage } from "./pages/ContactPage";
 import { PlayerPage } from "./pages/PlayerPage";
@@ -43,10 +42,6 @@ export const router = createBrowserRouter([
       {
         path: "/merits",
         element: <MeritsPage></MeritsPage>,
-      },
-      {
-        path: "/consulting",
-        element: <ConsultingPage></ConsultingPage>,
       },
       {
         path: "/partners",
