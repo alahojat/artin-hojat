@@ -11,7 +11,7 @@ export const ArticleCards = ({ articles }: IDisplayArticlesProps) => {
     <section className="grid grid-cols-1 gap-0 md:grid-cols-3 lg:grid-cols-4">
       {articles.map((article) => (
         <div key={article.id} className="article-card mt-6 p-2">
-          <p className="body-alt inline rounded bg-orange px-2">
+          <p className="body-alt body-alt-light inline rounded bg-midnight px-2">
             {new Date(article.date).toLocaleDateString("en-GB", {
               day: "2-digit",
               month: "long",
