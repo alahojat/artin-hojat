@@ -58,9 +58,7 @@ export const ContactForm = () => {
         {({ isSubmitting, resetForm, status }) => (
           <Form>
             <fieldset className="col">
-              <legend className="subheading subheading-light">
-                Contact us
-              </legend>
+              <legend className="sr-only">Get in touch</legend>
 
               <label className="label" htmlFor="user_name">
                 Name

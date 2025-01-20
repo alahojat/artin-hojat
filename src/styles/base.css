@@ -9,6 +9,7 @@
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     -webkit-text-size-adjust: 100%;
+    background-color: #dedede;
   }
   #root {
     display: flex;
@@ -24,6 +25,6 @@
   }
 
   .base {
-    @apply w-full flex-grow items-center pt-24 sm:px-4 sm:pb-16 lg:px-6 lg:pb-16 lg:pt-32;
+    @apply w-full max-w-[1470px] flex-grow items-center pt-24 sm:px-[20px] sm:pb-16 md:px-12 lg:px-20 lg:pb-16 lg:pt-32;
   }
 }

@@ -5,11 +5,11 @@ import { Layout } from "./pages/Layout";
 import { AboutPage } from "./pages/AboutPage";
 import { ArticlesPage } from "./pages/ArticlesPage";
 import { MeritsPage } from "./pages/MeritsPage";
-import { ConsultingPage } from "./pages/ConsultingPage";
 import { PartnersPage } from "./pages/PartnersPage";
 import { ContactPage } from "./pages/ContactPage";
 import { PlayerPage } from "./pages/PlayerPage";
 import { SingleArticlesPage } from "./pages/SingleArticlesPage";
+import { articlesLoader, singleArticleLoader } from "./loaders/articleLoader";
 
 export const router = createBrowserRouter([
   {
@@ -32,18 +32,16 @@ export const router = createBrowserRouter([
       {
         path: "/articles",
         element: <ArticlesPage></ArticlesPage>,
+        loader: articlesLoader,
       },
       {
-        path: "/articles/singlearticle",
+        path: "/articles/:id",
         element: <SingleArticlesPage></SingleArticlesPage>,
+        loader: singleArticleLoader,
       },
       {
         path: "/merits",
         element: <MeritsPage></MeritsPage>,
-      },
-      {
-        path: "/consulting",
-        element: <ConsultingPage></ConsultingPage>,
       },
       {
         path: "/partners",

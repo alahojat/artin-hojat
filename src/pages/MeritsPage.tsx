@@ -1,4 +1,4 @@
-import article from "../assets/article.jpg";
+import artinhojat from "../assets/artin-hojat-2.jpg";
 import { workExperienceData } from "../data/WorkExperienceData.tsx";
 import { educationData } from "../data/EducationData.tsx";
 
@@ -14,7 +14,7 @@ export const MeritsPage = () => {
           </h2>
           <img
             className="w-full object-cover sm:h-72 lg:h-[600px]"
-            src={article}
+            src={artinhojat}
             alt=""
           />
         </div>

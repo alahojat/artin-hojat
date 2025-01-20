@@ -12,7 +12,10 @@ export default {
       colors: {
         chalk: "#b8b8b8",
         ice: "#a7aeb4",
-        snow: "#dedede",
+        snow: {
+          DEFAULT: "#dedede",
+          low: "rgba(222, 222, 222, 0.8)",
+        },
         orange: "#d98443",
         slate: "#576884",
         steel: {
@@ -84,27 +87,39 @@ export default {
         },
         ".subheading-sm": {
           fontFamily: theme("fontFamily.zodiak"),
-          fontSize: "2.8rem",
-          fontWeight: "bold",
+          fontSize: "3rem",
+          fontWeight: "600",
           lineHeight: "100%",
         },
         ".subheading-alt-lg": {
           fontFamily: theme("fontFamily.zodiak"),
           fontSize: "2rem",
-          fontWeight: "600",
-          lineHeight: "100%",
+          fontWeight: "400",
+          lineHeight: "110%",
         },
         ".subheading-alt-sm": {
           fontFamily: theme("fontFamily.zodiak"),
           fontSize: "1.5rem",
           fontWeight: "400",
-          lineHeight: "100%",
+          lineHeight: "140%",
+        },
+        ".excerpt-lg": {
+          fontFamily: theme("fontFamily.plus-jakarta-sans"),
+          fontSize: "2rem",
+          fontWeight: "400",
+          lineHeight: "120%",
+        },
+        ".excerpt-sm": {
+          fontFamily: theme("fontFamily.plus-jakarta-sans"),
+          fontSize: "1.3rem",
+          fontWeight: "400",
+          lineHeight: "150%",
         },
         ".body-lg": {
           fontFamily: theme("fontFamily.plus-jakarta-sans"),
           fontSize: "1.2rem",
           fontWeight: "400",
-          lineHeight: "120%",
+          lineHeight: "150%",
         },
         ".body-sm": {
           fontFamily: theme("fontFamily.plus-jakarta-sans"),
@@ -114,15 +129,20 @@ export default {
         },
         ".body-alt-lg": {
           fontFamily: theme("fontFamily.plus-jakarta-sans"),
-          fontSize: "1rem",
+          fontSize: "1.2rem",
           fontWeight: "400",
         },
         ".body-alt-sm": {
           fontFamily: theme("fontFamily.plus-jakarta-sans"),
-          fontSize: "0.8rem",
+          fontSize: "1rem",
           fontWeight: "400",
         },
         ".word-lg": {
+          fontFamily: theme("fontFamily.zodiak"),
+          fontSize: "1.2rem",
+          fontWeight: "400",
+        },
+        ".word-md": {
           fontFamily: theme("fontFamily.zodiak"),
           fontSize: "1rem",
           fontWeight: "400",

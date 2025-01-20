@@ -1,9 +1,9 @@
-import article from "../assets/article.jpg";
+import artinhojat from "../assets/artin-hojat-2.jpg";
 
 export const AboutPage = () => {
   return (
     <>
-      <section className="base">
+      <section className="base bg-ice">
         <h2 className="subheading">About me</h2>
         <p className="body">
           My mission is to empower individuals in the industry and public
@@ -24,7 +24,7 @@ export const AboutPage = () => {
 
         <section>
           <h1>SPOTIFY WIDGET</h1>
-          <img src={article} alt="" />
+          <img src={artinhojat} alt="" />
         </section>
       </section>
     </>

@@ -8,11 +8,12 @@ export const PlayerPresentation = () => {
           {players.map((player) => (
             <div key={player.id} className="player-card group">
               <div className="relative">
-                <div className="aspect-w-3 aspect-h-4">
+                <div className="aspect-h-4 aspect-w-3">
                   <img
                     src={player.url}
                     alt={player.description}
-                    className="object-cover"
+                    loading="lazy"
+                    className="w-full object-cover"
                   />
                 </div>
 

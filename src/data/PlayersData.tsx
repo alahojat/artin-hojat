@@ -1,9 +1,9 @@
-import melwin from "../assets/players/melwin-pantzar.png";
+import melwin from "../assets/players/melwin-pantzar.jpg";
 import elliot from "../assets/players/elliot.jpg";
 import ludde from "../assets/players/ludde-hakanson.jpg";
 import amanda from "../assets/players/amanda-zahui.jpg";
 import bobi from "../assets/players/bobi-klintman.jpg";
-import pelle from "../assets/players/pelle-larsson.png";
+import pelle from "../assets/players/pelle-larsson.jpg";
 
 export const players = [
   {
