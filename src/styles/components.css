@@ -17,6 +17,16 @@
         @apply bg-slate text-snow;
       }
     }
+    &.button-secondary-dark {
+      @apply bg-transparent text-steel;
+      &:hover {
+        @apply border border-solid border-steel;
+      }
+
+      &:active {
+        @apply bg-ice text-steel;
+      }
+    }
   }
 
   .input {
