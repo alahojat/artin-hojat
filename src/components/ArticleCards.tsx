@@ -1,12 +1,12 @@
 import { Link } from "react-router-dom";
-import { IArticlesResponse } from "../models/IArticles";
+import { IArticle } from "../models/IArticles";
 import parse from "html-react-parser";
 
-interface IDisplayArticlesProps {
-  articles: IArticlesResponse;
+interface IArticlesCardProps {
+  articles: IArticle[];
 }
 
-export const ArticleCards = ({ articles }: IDisplayArticlesProps) => {
+export const ArticleCards = ({ articles }: IArticlesCardProps) => {
   return (
     <section className="grid grid-cols-1 gap-0 md:grid-cols-3 lg:grid-cols-4">
       {articles.map((article) => (
