@@ -76,6 +76,10 @@
   }
 
   li {
-    @apply lg:hover:text-midnight lg:hover:underline;
+    @apply lg:hover:text-midnight;
+  }
+
+  .active {
+    @apply text-midnight underline;
   }
 }
