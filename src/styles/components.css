@@ -27,6 +27,16 @@
         @apply bg-ice text-steel;
       }
     }
+    &.button-tertiary {
+      @apply border border-solid border-steel bg-transparent text-steel;
+      &:hover {
+        @apply bg-ice;
+      }
+
+      &:active {
+        @apply bg-ice text-steel;
+      }
+    }
   }
 
   .input {
