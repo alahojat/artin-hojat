@@ -61,7 +61,7 @@ export const Menu = () => {
               ></div>
             </div>
 
-            <ul className="menu overflow-x-auto p-4 sm:text-right md:flex md:flex-wrap md:items-start md:gap-4 md:overflow-visible md:text-left lg:gap-10">
+            <ul className="menu overflow-x-auto p-4 sm:mt-10 sm:text-right md:flex md:flex-wrap md:items-start md:gap-4 md:overflow-visible md:text-left lg:gap-10">
               <li>
                 <NavLink
                   to={"/articles"}
@@ -76,7 +76,7 @@ export const Menu = () => {
                   to={"/player-optimization"}
                   onClick={handleNavLinkClick}
                 >
-                  Player Optimization
+                  Player optimization
                 </NavLink>
               </li>
               <li>
