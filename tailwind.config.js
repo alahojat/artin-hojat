@@ -159,7 +159,7 @@ export default {
         },
         ".footer-lg": {
           fontFamily: theme("fontFamily.zodiak"),
-          fontSize: "1.3rem",
+          fontSize: "1rem",
           fontWeight: "400",
         },
         ".copyright-sm": {
