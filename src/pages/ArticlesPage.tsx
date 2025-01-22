@@ -40,28 +40,29 @@ export const ArticlesPage = () => {
   return (
     <>
       <section className="base bg-chalk">
-        <h2 className="subheading">The Art in Science</h2>
-        <div className="lg:col mb-6 lg:items-start lg:justify-between">
+        <h2 className="subheading mt-0">The Art in Science</h2>
+        <div className="lg:row mb-6 lg:mt-6 lg:items-start">
           <input
-            className="input"
+            className="input lg:mt-4"
             type="text"
             value={searchText}
             onChange={(e) => setSearchText(e.target.value)}
           />
           <div className="lg:row">
+            <button className="button button-tertiary" onClick={handleSearch}>
+              Search
+            </button>
             <button
               className="button button-secondary-dark"
               onClick={clearSearch}
             >
               Clear
             </button>
-            <button className="button" onClick={handleSearch}>
-              Search
-            </button>
           </div>
         </div>
+
         <ArticleCards articles={currentArticles} />
-        <div>
+        <div className="col items-center justify-center">
           <Pagination
             current={pageIndex}
             total={filteredArticles.length}
@@ -87,7 +88,7 @@ export const ArticlesPage = () => {
             }}
             hideOnSinglePage={true}
             onChange={handlePageChange}
-            className="row subheading-alt gap-3 text-steel"
+            className="row body gap-3 text-steel"
           />
         </div>
       </section>
