@@ -159,7 +159,7 @@ export default {
         },
         ".footer-lg": {
           fontFamily: theme("fontFamily.zodiak"),
-          fontSize: "1rem",
+          fontSize: "1.1rem",
           fontWeight: "400",
         },
         ".copyright-sm": {
@@ -170,7 +170,7 @@ export default {
         },
         ".copyright-lg": {
           fontFamily: theme("fontFamily.zodiak"),
-          fontSize: "1rem",
+          fontSize: "0.8rem",
           fontWeight: "400",
         },
         ".photocred-sm": {
