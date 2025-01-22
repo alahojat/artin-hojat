@@ -80,6 +80,6 @@
   }
 
   .active {
-    @apply text-midnight underline;
+    @apply underline md:text-midnight;
   }
 }
