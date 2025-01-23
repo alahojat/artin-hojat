@@ -1,4 +1,4 @@
-import logo from "../assets/site-logo/artin-hojat-fill-orange-bg.svg";
+import logo from "/site-logo/artin-hojat-fill-orange-bg.svg";
 
 export const Hero = ({ onDismiss }: { onDismiss: () => void }) => {
   return (

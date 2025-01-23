@@ -1,4 +1,4 @@
-import circleLogo from "../assets/site-logo/artin-hojat-circle.svg";
+import circleLogo from "/site-logo/artin-hojat-circle.svg";
 import { CiYoutube } from "react-icons/ci";
 import { ScrollingBanner } from "../components/ScrollingBanner";
 import { CiInstagram } from "react-icons/ci";

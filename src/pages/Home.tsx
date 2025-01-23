@@ -1,6 +1,6 @@
 import { SpotifyEmbed } from "../components/SpotifyEmbed";
-import artinhojat2 from "../assets/artin-hojat-3.jpg";
-import jimmy from "../assets/article-img/jimmy.jpeg";
+import artinhojat2 from "/artin-hojat-3.jpg";
+import jimmy from "/jimmy.jpeg";
 import { NavLink } from "react-router-dom";
 
 export const Home = () => {

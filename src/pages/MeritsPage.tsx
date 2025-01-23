@@ -1,6 +1,6 @@
-import artinhojat from "../assets/artin-hojat-2.jpg";
-import artinhojat3 from "../assets/artin-hojat-3.jpg";
-import snoh from "../assets/snoh.jpg";
+import artinhojat from "/artin-hojat-2.jpg";
+import artinhojat3 from "/artin-hojat-3.jpg";
+import snoh from "/snoh.jpg";
 import { workExperienceData } from "../data/WorkExperienceData.tsx";
 import { educationData } from "../data/EducationData.tsx";
 import { journalisticData } from "../data/JournalisticData.tsx";
