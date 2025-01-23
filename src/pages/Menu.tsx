@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { NavLink } from "react-router-dom";
-import defaultLogo from "../assets/site-logo/artin-hojat-steel.svg";
-import lightLogo from "../assets/site-logo/artin-hojat-fill-orange-bg.svg";
+import defaultLogo from "/site-logo/artin-hojat-steel.svg";
+import lightLogo from "/site-logo/artin-hojat-fill-orange-bg.svg";
 
 export const Menu = () => {
   const [menuIsOpen, setMenuIsOpen] = useState(false);

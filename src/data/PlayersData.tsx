@@ -1,9 +1,9 @@
-import melwin from "../assets/players/melwin-pantzar.jpg";
-import elliot from "../assets/players/elliot.jpg";
-import ludde from "../assets/players/ludde-hakanson.jpg";
-import amanda from "../assets/players/amanda-zahui.jpg";
-import bobi from "../assets/players/bobi-klintman.jpg";
-import pelle from "../assets/players/pelle-larsson.jpg";
+import melwin from "/players/melwin-pantzar.jpg";
+import elliot from "/players/elliot.jpg";
+import ludde from "/players/ludde-hakanson.jpg";
+import amanda from "/players/amanda-zahui.jpg";
+import bobi from "/players/bobi-klintman.jpg";
+import pelle from "/players/pelle-larsson.jpg";
 
 export const players = [
   {
