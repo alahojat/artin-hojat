@@ -3,6 +3,7 @@ import { ArticleCards } from "../components/ArticleCards";
 import { IArticle, IArticlesResponse } from "../models/IArticles";
 import { useState } from "react";
 import Pagination from "rc-pagination";
+import { GoBackBtn } from "../components/GoBackBtn";
 
 export const ArticlesPage = () => {
   const articles = useLoaderData() as IArticlesResponse;
@@ -28,6 +29,11 @@ export const ArticlesPage = () => {
 
   const handlePageChange = (page: number) => {
     setPageIndex(page);
+    window.scroll({
+      top: 0,
+      left: 0,
+      behavior: "auto",
+    });
   };
 
   const indexOfLastArticle = pageIndex * articlesPerPage;
@@ -40,6 +46,7 @@ export const ArticlesPage = () => {
   return (
     <>
       <section className="base bg-chalk">
+        <GoBackBtn></GoBackBtn>
         <h2 className="subheading mt-0">The Art in Science</h2>
         <div className="lg:row mb-6 lg:mt-6 lg:items-start">
           <input
@@ -70,11 +77,8 @@ export const ArticlesPage = () => {
             showSizeChanger={true}
             showQuickJumper={false}
             itemRender={(page, type) => {
-              if (type === "prev") {
-                return <button className="text-steel">←</button>;
-              }
-              if (type === "next") {
-                return <button className="text-steel">→</button>;
+              if (type === "prev" || type === "next") {
+                return null;
               }
               return (
                 <button
