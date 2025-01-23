@@ -1,9 +1,9 @@
 import { IArticle, IArticlesResponse, IMedia } from "../models/IArticles";
 import { get } from "./serviceBase";
 
-const BASE_URL = "http://13.61.183.91/wp-json/wp/v2/posts";
+const BASE_URL = "http://articlesartinhojat.com/wp-json/wp/v2/posts";
 
-const MEDIA_URL = "http://13.61.183.91.com/wp-json/wp/v2/media";
+const MEDIA_URL = "http://articlesartinhojat.com/wp-json/wp/v2/media";
 
 // Fetch all articles
 export const getArticles = async (): Promise<IArticlesResponse> => {
