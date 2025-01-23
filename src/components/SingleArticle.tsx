@@ -8,8 +8,6 @@ import { GoBackBtn } from "./GoBackBtn";
 export const SingleArticle = () => {
   const singleArticle = useLoaderData() as IArticle & { media: IMedia };
 
-  console.log("what is ", singleArticle);
-
   return (
     <>
       <GoBackBtn></GoBackBtn>
