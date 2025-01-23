@@ -1,7 +1,7 @@
 @layer base {
   .heading {
     @apply text-steel sm:heading-sm lg:heading-lg sm:my-2 lg:mx-0 lg:my-4;
-    &.header-light {
+    &.heading-light {
       @apply text-snow;
     }
   }
@@ -64,11 +64,11 @@
   }
 
   label {
-    @apply mb-1 mt-2 text-snow sm:body-sm lg:body-lg;
+    @apply my-2 text-snow sm:body-sm lg:body-lg;
   }
 
   .error-text {
-    @apply text-red-600 sm:body-sm lg:body-lg;
+    @apply text-snow lg:body-lg sm:text-sm;
   }
 
   .success {
