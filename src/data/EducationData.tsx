@@ -43,7 +43,7 @@ export const educationData = [
   {
     id: 5,
     level: "Certification",
-    title: "Personal Trainer Education",
+    degree: "Personal Trainer Education",
     institution: "The Academy",
     location: "",
     dates: "",
