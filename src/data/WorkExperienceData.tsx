@@ -1,8 +1,8 @@
 export const workExperienceData = [
   {
     id: 1,
-    title: "Player Development Trainer/Basketball and Athletics",
-    employmentType: "Self Employed",
+    title: "Player development trainer/basketball and athletics",
+    company: "Self-employed",
     location: "",
     dates: "Present",
     description:
@@ -10,8 +10,8 @@ export const workExperienceData = [
   },
   {
     id: 2,
-    title: "Health & Performance Consultant",
-    employmentType: "Self Employed",
+    title: "Health & performance consultant",
+    company: "Self-employed",
     location: "",
     dates: "Present",
     description:
@@ -19,7 +19,7 @@ export const workExperienceData = [
   },
   {
     id: 3,
-    title: "Writer, Media and Event Planning",
+    title: "Writer, media and event planning",
     company: "Kingsize Magazine",
     location: "Stockholm, Sweden",
     dates: "2014 - 2020",
@@ -28,7 +28,7 @@ export const workExperienceData = [
   },
   {
     id: 4,
-    title: "Physical Therapy Intern",
+    title: "Physical therapy intern",
     company: "OrthoSport",
     location: "Davie, Florida",
     dates: "Fall 2023",
@@ -37,7 +37,7 @@ export const workExperienceData = [
   },
   {
     id: 5,
-    title: "Head of Basketball Operations, Personal Trainer",
+    title: "Head of basketball operations, personal trainer",
     company: "SATS Sports Club",
     location: "Stockholm, Sweden",
     dates: "2019 - 2022",
@@ -46,8 +46,8 @@ export const workExperienceData = [
   },
   {
     id: 6,
-    title: "Coordinator for NBA 2K Events",
-    employmentType: "Event Planning and Management",
+    title: "Coordinator for NBA 2K events",
+    company: "NBA 2K",
     location: "Stockholm, Sweden",
     dates: "2015 - 2020",
     description:
