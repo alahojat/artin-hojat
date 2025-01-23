@@ -7,12 +7,12 @@ import { PiLinkedinLogoThin } from "react-icons/pi";
 
 export const Footer = () => {
   return (
-    <footer className="col h-[500px] bg-orange lg:h-[350px] lg:w-full lg:pb-4">
+    <footer className="col bg-orange sm:h-[500px] md:h-[550] lg:h-[350px] lg:w-full lg:pb-4">
       <div className="flex-shrink-0 bg-midnight">
         <ScrollingBanner />
       </div>
 
-      <section className="sm:col lg:row mx-4 flex-1 items-center justify-center md:flex md:gap-12 lg:mx-auto lg:max-w-[1100px] lg:items-start">
+      <section className="sm:col lg:row mx-4 flex-1 items-center justify-center md:flex md:gap-6 lg:mx-auto lg:max-w-[1100px] lg:items-start">
         <div className="my-8 flex items-center justify-center">
           <img
             className="md:w-30 h-auto sm:w-28 lg:w-40"
