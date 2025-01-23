@@ -7,10 +7,16 @@ interface IArticlesCardProps {
 }
 
 export const ArticleCards = ({ articles }: IArticlesCardProps) => {
+  const handleClick = () => {
+    window.scrollTo(0, 0);
+  };
   return (
     <section className="grid grid-cols-1 gap-0 md:grid-cols-3 lg:grid-cols-4">
       {articles.map((article) => (
-        <div key={article.id} className="article-card mt-6 p-2">
+        <div
+          key={article.id}
+          className="article-card intersect:motion-preset-fade mt-6 p-2"
+        >
           <p className="body-alt body-alt-light inline rounded bg-midnight px-2">
             {new Date(article.date).toLocaleDateString("en-GB", {
               day: "2-digit",
@@ -27,6 +33,7 @@ export const ArticleCards = ({ articles }: IArticlesCardProps) => {
           <Link
             to={`/articles/${article.id}`}
             className="subheading-alt cursor-pointer hover:text-midnight hover:underline"
+            onClick={handleClick}
           >
             {article.title.rendered}
           </Link>
