@@ -5,6 +5,7 @@ export const GoBackBtn = () => {
 
   const handleGoBack = () => {
     navigate(-1);
+    scroll(0, 0);
   };
 
   return (

@@ -17,21 +17,41 @@
         @apply bg-slate text-snow;
       }
     }
+    &.button-secondary-dark {
+      @apply bg-transparent text-steel;
+      &:hover {
+        @apply border border-solid border-steel;
+      }
+
+      &:active {
+        @apply bg-ice text-steel;
+      }
+    }
+    &.button-tertiary {
+      @apply border border-solid border-steel bg-transparent text-steel;
+      &:hover {
+        @apply bg-ice;
+      }
+
+      &:active {
+        @apply bg-ice text-steel;
+      }
+    }
   }
 
   .input {
-    @apply m-1 h-9 rounded bg-snow p-2 sm:body-sm lg:body-lg sm:w-64 md:w-[20rem] lg:w-[30rem];
+    @apply s:w-[19rem] m-1 h-9 rounded bg-snow p-2 sm:body-sm lg:body-lg sm:w-64 md:w-[20rem] lg:w-[30rem];
     &:hover {
       @apply bg-ice;
     }
   }
 
   .textarea {
-    @apply m-1 resize-none rounded bg-snow p-3 text-base sm:h-32 sm:w-64 md:h-40 md:w-[20rem] lg:w-[30rem];
+    @apply s:w-[19rem] m-1 resize-none rounded bg-snow p-3 text-base sm:h-32 sm:w-64 md:h-40 md:w-[20rem] lg:w-[30rem];
   }
 
   .hero {
-    @apply flex min-h-screen w-full flex-col items-center justify-center bg-cover bg-center bg-no-repeat p-5 text-center text-white lg:bg-top;
+    @apply flex min-h-screen w-full flex-col items-center justify-center bg-[url('../src/assets/article-img/artin-melwin.jpeg')] bg-cover bg-center bg-no-repeat p-5 text-center lg:bg-top;
   }
 
   .row {
@@ -40,5 +60,9 @@
 
   .col {
     @apply flex flex-col;
+  }
+
+  .orange-circle {
+    @apply flex h-16 w-16 items-center justify-center rounded-full border-4 border-orange;
   }
 }

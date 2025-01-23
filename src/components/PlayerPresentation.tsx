@@ -3,10 +3,13 @@ import { players } from "../data/PlayersData.tsx";
 export const PlayerPresentation = () => {
   return (
     <>
-      <section className="bg-steel">
+      <section>
         <div className="grid grid-cols-1 bg-steel md:grid-cols-2 lg:grid-cols-3">
           {players.map((player) => (
-            <div key={player.id} className="player-card group">
+            <div
+              key={player.id}
+              className="player-card motion-preset-fade motion-duration-2000 group"
+            >
               <div className="relative">
                 <div className="aspect-h-4 aspect-w-3">
                   <img

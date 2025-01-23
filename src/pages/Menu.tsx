@@ -9,7 +9,9 @@ export const Menu = () => {
   const currentPath = window.location.pathname;
 
   const isDarkBackground =
-    currentPath === "/contact" || currentPath === "/player-optimization";
+    currentPath === "/contact" ||
+    currentPath === "/player-optimization" ||
+    currentPath === "/merits";
 
   const logo = isDarkBackground ? lightLogo : defaultLogo;
 
@@ -55,15 +57,16 @@ export const Menu = () => {
             } z-20 transition-transform duration-300 md:static md:h-auto md:w-full md:translate-x-0 md:flex-row md:items-center md:justify-between`}
           >
             <div className="m-4 flex justify-end md:hidden">
-              <div
-                className="flex h-16 w-16 items-center justify-center rounded-full border-4 border-orange"
-                onClick={toggleMenu}
-              ></div>
+              <div className="orange-circle" onClick={toggleMenu}></div>
             </div>
 
-            <ul className="menu overflow-x-auto p-4 sm:text-right md:flex md:flex-wrap md:items-start md:gap-4 md:overflow-visible md:text-left lg:gap-10">
+            <ul className="menu overflow-x-auto p-4 sm:mt-10 sm:text-right md:mt-0 md:flex md:flex-wrap md:items-start md:gap-4 md:overflow-visible md:text-left lg:gap-10">
               <li>
-                <NavLink to={"/articles"} onClick={handleNavLinkClick}>
+                <NavLink
+                  to={"/articles"}
+                  onClick={handleNavLinkClick}
+                  className={({ isActive }) => (isActive ? "active" : "")}
+                >
                   The art in Science
                 </NavLink>
               </li>
@@ -72,7 +75,7 @@ export const Menu = () => {
                   to={"/player-optimization"}
                   onClick={handleNavLinkClick}
                 >
-                  Player Optimization
+                  Player optimization
                 </NavLink>
               </li>
               <li>
