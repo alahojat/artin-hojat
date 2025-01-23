@@ -47,6 +47,7 @@ export default {
       },
       screens: {
         sm: "300px",
+        s: "375px",
         md: "768px",
         lg: "1024px",
         xl: "1280px",
@@ -123,7 +124,7 @@ export default {
         },
         ".body-sm": {
           fontFamily: theme("fontFamily.plus-jakarta-sans"),
-          fontSize: "1rem",
+          fontSize: "1.2rem",
           fontWeight: "400",
           lineHeight: "150%",
         },
@@ -180,11 +181,13 @@ export default {
         },
         ".photocred-lg": {
           fontFamily: theme("fontFamily.plus-jakarta-sans"),
-          fontSize: "0.8rem",
+          fontSize: "0.7rem",
           fontWeight: "400",
         },
       });
     }),
     aspectRatio,
+    require("tailwindcss-motion"),
+    require("tailwindcss-intersect"),
   ],
 };
