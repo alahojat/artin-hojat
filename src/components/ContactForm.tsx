@@ -1,3 +1,4 @@
+import { useState } from "react";
 import emailjs from "@emailjs/browser";
 import { Formik, Form, Field, ErrorMessage, FormikHelpers } from "formik";
 import * as Yup from "yup";
@@ -9,6 +10,9 @@ type FormValues = {
 };
 
 export const ContactForm = () => {
+  const [messageStatus, setMessageStatus] = useState("");
+  const [errorStatus, setErrorStatus] = useState("");
+
   const initialValues: FormValues = {
     user_name: "",
     user_email: "",
@@ -21,15 +25,15 @@ export const ContactForm = () => {
       .min(2, "Name must be at least 2 characters."),
     user_email: Yup.string()
       .required("Don’t forget to share your email with us!")
-      .email("Hmm, that doesn’t look like a valid email address..."),
+      .email("Hmm, that doesn’t look like a email address!"),
     message: Yup.string()
-      .required("We would love to hear from you! Please type your message.")
-      .min(10, "Your message is a bit short. Tell us a little more!"),
+      .required("We would love to hear from you!")
+      .min(10, "Your message is too short.."),
   });
 
   const handleSubmit = async (
     values: FormValues,
-    { setSubmitting, resetForm, setStatus }: FormikHelpers<FormValues>,
+    { setSubmitting, resetForm }: FormikHelpers<FormValues>,
   ): Promise<void> => {
     setSubmitting(true);
     try {
@@ -39,30 +43,33 @@ export const ContactForm = () => {
         values,
         import.meta.env.VITE_EMAILJS_PUBLIC_KEY,
       );
-      setStatus({ success: "Thank you for your email!" });
+      setMessageStatus("Thank you for your email!");
+      setErrorStatus("");
       resetForm();
     } catch (error) {
       console.error("EmailJS Error:", error);
-      setStatus({ error: "Failed to send email. Please try again." });
+      setErrorStatus("Failed to send email. Please try again.");
+      setMessageStatus("");
     } finally {
       setSubmitting(false);
     }
   };
-  return (
-    <>
-      <Formik
-        initialValues={initialValues}
-        validationSchema={validationSchema}
-        onSubmit={handleSubmit}
-      >
-        {({ isSubmitting, resetForm, status }) => (
-          <Form>
-            <fieldset className="col">
-              <legend className="sr-only">Get in touch</legend>
 
-              <label className="label" htmlFor="user_name">
-                Name
-              </label>
+  return (
+    <Formik
+      initialValues={initialValues}
+      validationSchema={validationSchema}
+      onSubmit={handleSubmit}
+    >
+      {({ isSubmitting, resetForm }) => (
+        <Form>
+          <fieldset className="col">
+            <legend className="sr-only">Get in touch</legend>
+
+            <label className="label" htmlFor="user_name">
+              Name
+            </label>
+            <div className="h-16">
               <Field
                 id="user_name"
                 name="user_name"
@@ -74,10 +81,12 @@ export const ContactForm = () => {
                 component="p"
                 className="error-text"
               />
+            </div>
 
-              <label className="label" htmlFor="user_email">
-                Email
-              </label>
+            <label className="label" htmlFor="user_email">
+              Email
+            </label>
+            <div className="col h-16">
               <Field
                 id="user_email"
                 name="user_email"
@@ -90,10 +99,12 @@ export const ContactForm = () => {
                 component="p"
                 className="error-text"
               />
+            </div>
 
-              <label className="label" htmlFor="message">
-                Message
-              </label>
+            <label className="label" htmlFor="message">
+              Message
+            </label>
+            <div className="h-52">
               <Field
                 as="textarea"
                 id="message"
@@ -104,34 +115,29 @@ export const ContactForm = () => {
               <ErrorMessage
                 name="message"
                 component="p"
-                className="error-text"
+                className="error-text text-wrap"
               />
+            </div>
 
-              <div className="row items-center justify-center">
-                <button
-                  className="button button-secondary"
-                  type="button"
-                  onClick={() => resetForm()}
-                >
-                  Clear
-                </button>
-                <button
-                  className="button"
-                  type="submit"
-                  disabled={isSubmitting}
-                >
-                  {isSubmitting ? "Sending..." : "Send"}
-                </button>
-              </div>
-            </fieldset>
-
-            {status && status.success && (
-              <p className="success">{status.success}</p>
-            )}
-            {status && status.error && <p className="error">{status.error}</p>}
-          </Form>
-        )}
-      </Formik>
-    </>
+            <div className="row items-center justify-center">
+              <button
+                className="button button-secondary"
+                type="button"
+                onClick={() => resetForm()}
+              >
+                Clear
+              </button>
+              <button className="button" type="submit" disabled={isSubmitting}>
+                {isSubmitting ? "Sending..." : "Send"}
+              </button>
+            </div>
+          </fieldset>
+          <div className="body body-light">
+            {messageStatus && <p className="success">{messageStatus}</p>}
+            {errorStatus && <p className="error-text">{errorStatus}</p>}
+          </div>
+        </Form>
+      )}
+    </Formik>
   );
 };
