@@ -1,4 +1,4 @@
-import artinhojat from "../assets/artin-hojat-2.jpg";
+import { SpotifyEmbed } from "../components/SpotifyEmbed";
 
 export const AboutPage = () => {
   return (
@@ -23,8 +23,7 @@ export const AboutPage = () => {
         </p>
 
         <section>
-          <h1>SPOTIFY WIDGET</h1>
-          <img src={artinhojat} alt="" />
+          <SpotifyEmbed></SpotifyEmbed>
         </section>
       </section>
     </>
