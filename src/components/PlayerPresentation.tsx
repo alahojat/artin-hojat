@@ -1,4 +1,5 @@
 import { players } from "../data/PlayersData.tsx";
+import { StyledImg } from "./StyledImg.tsx";
 
 export const PlayerPresentation = () => {
   return (
@@ -11,15 +12,11 @@ export const PlayerPresentation = () => {
               className="player-card motion-preset-fade motion-duration-2000 group"
             >
               <div className="relative">
-                <div className="aspect-h-4 aspect-w-3">
-                  <img
-                    src={player.url}
-                    alt={player.description}
-                    loading="lazy"
-                    className="w-full object-cover"
-                  />
-                </div>
-
+                <StyledImg
+                  src={player.url}
+                  alt={player.description}
+                  figClassName="aspect-h-4 aspect-w-3"
+                ></StyledImg>
                 <div className="col absolute inset-0 items-center justify-center bg-steel bg-opacity-80 p-4 opacity-0 transition-opacity duration-300 ease-in-out group-hover:opacity-100">
                   <h2 className="subheading-alt subheading-alt-light">
                     {player.title}
