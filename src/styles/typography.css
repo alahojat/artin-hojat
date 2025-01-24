@@ -76,7 +76,7 @@
   }
 
   li {
-    @apply lg:hover:text-midnight;
+    @apply hover:underline lg:hover:text-steel;
   }
 
   .active {
