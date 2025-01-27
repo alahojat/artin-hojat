@@ -3,7 +3,6 @@ import { ArticleCards } from "../components/ArticleCards";
 import { IArticle, IArticlesResponse } from "../models/IArticles";
 import { useState } from "react";
 import Pagination from "rc-pagination";
-import { GoBackBtn } from "../components/GoBackBtn";
 
 export const ArticlesPage = () => {
   const articles = useLoaderData() as IArticlesResponse;
@@ -46,7 +45,6 @@ export const ArticlesPage = () => {
   return (
     <>
       <section className="base bg-ice">
-        <GoBackBtn></GoBackBtn>
         <h2 className="subheading mt-0">The art:in science</h2>
         <fieldset className="md:row mb-0 sm:mt-6 md:items-center lg:mt-6 lg:items-start">
           <input
