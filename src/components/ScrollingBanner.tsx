@@ -31,7 +31,7 @@ export const ScrollingBanner = () => {
   return (
     <div
       ref={handleRef}
-      className="relative mt-4 w-full overflow-hidden bg-steel sm:h-[55px] lg:h-[95px]"
+      className="relative mt-4 w-full overflow-hidden bg-steel sm:h-[60px] lg:h-[90px]"
     >
       <div
         className={`absolute whitespace-nowrap transition-transform ${
@@ -39,10 +39,10 @@ export const ScrollingBanner = () => {
         }`}
       >
         <h2 className="subheading subheading-light inline-block uppercase">
-          Performance Optimization Performance Optimization
+          Optimize your performance Optimize your performance
         </h2>
         <h2 className="subheading subheading-light inline-block uppercase">
-          Performance Optimization Performance Optimization
+          Optimize your performance Optimize your performance
         </h2>
       </div>
     </div>
