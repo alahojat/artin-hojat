@@ -17,7 +17,7 @@ export const StyledImg = ({
   photocred = "",
   figClassName = "",
   imgClassName = "object-cover",
-  captionClassName = "photocred mr-2",
+  captionClassName = "photocred mt-1 ml-2",
 }: StyledImgProps) => {
   return (
     <figure className={`${figClassName}`}>
