@@ -43,7 +43,10 @@ export const ArticleCards = ({ articles }: IArticlesCardProps) => {
             className="cursor-pointer hover:text-midnight hover:underline"
             onClick={handleClick}
           >
-            <p className="body-alt m-0 hover:text-midnight hover:underline">
+            <p
+              aria-label="Read more about this article"
+              className="body-alt m-0 hover:text-midnight hover:underline"
+            >
               Read more
             </p>
           </Link>
