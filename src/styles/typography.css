@@ -12,8 +12,7 @@
 
   @font-face {
     font-family: "Zodiak";
-    src:
-      url("/fonts/Zodiak-Bold.woff2") format("woff2"),
+    src: url("/fonts/Zodiak-Bold.woff2") format("woff2");
     font-weight: 900;
     font-style: normal;
     font-display: swap;
