@@ -13,20 +13,7 @@
   @font-face {
     font-family: "Zodiak";
     src:
-      url("/fonts/Zodiak-SemiBold.woff2") format("woff2"),
-      url("/fonts/Zodiak-SemiBold.woff") format("woff"),
-      url("/fonts/Zodiak-SemiBold.ttf") format("truetype");
-    font-weight: 600;
-    font-style: normal;
-    font-display: swap;
-  }
-
-  @font-face {
-    font-family: "Zodiak";
-    src:
       url("/fonts/Zodiak-Bold.woff2") format("woff2"),
-      url("/fonts/Zodiak-Bold.woff") format("woff"),
-      url("/fonts/Zodiak-Bold.ttf") format("truetype");
     font-weight: 900;
     font-style: normal;
     font-display: swap;
