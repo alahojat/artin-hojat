@@ -1,15 +1,13 @@
 @layer base {
   @font-face {
     font-family: "Zodiak";
-    src:
-      url("../assets/fonts/Zodiak.woff2") format("woff2"),
+    src: url("../assets/fonts/Zodiak.woff2") format("woff2");
     font-weight: normal;
     font-style: normal;
   }
   @font-face {
     font-family: "Plus Jakarta Sans";
-    src:
-      url("../assets/fonts/PlusJakartaSans.woff2") format("woff2"),
+    src: url("../assets/fonts/PlusJakartaSans.woff2") format("woff2");
     font-weight: normal;
     font-style: normal;
   }
