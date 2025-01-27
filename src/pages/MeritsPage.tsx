@@ -1,9 +1,10 @@
 import artinhojat from "/artin-hojat-2.jpg";
-import artinhojat3 from "/artin-hojat-3.jpg";
+import skurubasket from "/skuru-basket.jpeg";
 import snoh from "/snoh.jpg";
 import { workExperienceData } from "../data/WorkExperienceData.tsx";
 import { educationData } from "../data/EducationData.tsx";
 import { journalisticData } from "../data/JournalisticData.tsx";
+import { StyledImg } from "../components/StyledImg.tsx";
 
 export const MeritsPage = () => {
   const work = workExperienceData;
@@ -11,34 +12,30 @@ export const MeritsPage = () => {
   const journalism = journalisticData;
   return (
     <>
-      <section className="w-full max-w-[1470px] flex-grow items-center bg-chalk sm:pb-16 md:mt-4 lg:pb-16">
+      <section className="base-img-top bg-snow">
         <div className="md:grid md:grid-cols-2 lg:grid-cols-3">
-          <figure className="text-right sm:hidden md:block">
-            <img
-              className="w-full object-cover md:h-80 lg:h-96"
-              src={artinhojat}
-              alt=""
-            />
-            <span className="photocred mr-2">Photo: Ala Hojat</span>
-          </figure>
-          <figure className="text-right sm:hidden md:hidden lg:block">
-            <img
-              className="w-full object-cover sm:h-56 lg:h-96"
-              src={snoh}
-              alt=""
-            />
-            <span className="photocred mr-2">Photo: Kristian Riffo</span>
-          </figure>
-          <figure className="text-right">
-            <img
-              className="w-full object-cover sm:h-56 md:h-80 lg:h-96"
-              src={artinhojat3}
-              alt=""
-            />
-            <span className="photocred mr-2">Photo: Josefine Tolleman</span>
-          </figure>
+          <StyledImg
+            src={skurubasket}
+            alt="fdsafds"
+            photocred="Ala Hojat"
+            figClassName="sm:hidden md:block"
+            imgClassName="sm:h-56  object-[75%_25%] md:h-80 lg:h-96"
+          ></StyledImg>
+          <StyledImg
+            src={snoh}
+            alt="fdsafds"
+            photocred="Kristian Riffo"
+            figClassName="sm:hidden md:hidden lg:block"
+            imgClassName="sm:h-56 md:h-80 lg:h-96"
+          ></StyledImg>
+          <StyledImg
+            src={artinhojat}
+            alt="fdsafds"
+            photocred="Ala Hojat"
+            imgClassName="sm:h-56 md:h-80 lg:h-96 "
+          ></StyledImg>
         </div>
-        <div className="mx-4 my-4 grid grid-cols-1 gap-4 md:mx-6 lg:mx-8 lg:grid-cols-3">
+        <div className="m-4 grid grid-cols-1 gap-4 md:mx-6 lg:mx-8 lg:grid-cols-3">
           <article className="border-t border-solid border-steel pb-2">
             <h3 className="subheading-alt">Education</h3>
             {education.map((item) => (
