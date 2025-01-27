@@ -21,7 +21,7 @@ export const cleanContent = (html: string) => {
             );
           case "p":
             return (
-              <p className="body mt-0">
+              <p className="body">
                 {domToReact(element.children as DOMNode[])}
               </p>
             );
