@@ -1,4 +1,18 @@
 @layer base {
+  @font-face {
+    font-family: "Zodiak";
+    src:
+      url("../assets/fonts/Zodiak.woff2") format("woff2"),
+    font-weight: normal;
+    font-style: normal;
+  }
+  @font-face {
+    font-family: "Plus Jakarta Sans";
+    src:
+      url("../assets/fonts/PlusJakartaSans.woff2") format("woff2"),
+    font-weight: normal;
+    font-style: normal;
+  }
   .heading {
     @apply text-steel sm:heading-sm lg:heading-lg sm:my-2 lg:mx-0 lg:my-4;
     &.heading-light {
@@ -31,12 +45,11 @@
     }
   }
   .body {
-    @apply text-steel sm:body-sm lg:body-lg sm:my-4 lg:my-6;
+    @apply text-steel sm:body-sm lg:body-lg sm:my-2 lg:my-6;
     &.body-light {
       @apply text-snow;
     }
   }
-
   .body-alt {
     @apply body-alt-sm text-steel;
     &.body-alt-light {
@@ -58,27 +71,21 @@
   .a {
     @apply text-sm lg:footer-lg;
   }
-
   .menu {
     @apply md:word-md sm:word-sm lg:word-lg sm:text-orange md:text-steel;
   }
-
   label {
     @apply my-2 text-snow sm:body-sm lg:body-lg;
   }
-
   .error-text {
     @apply text-snow lg:body-lg sm:text-sm;
   }
-
   .success {
     @apply text-snow sm:body-sm lg:body-lg;
   }
-
   li {
     @apply hover:underline lg:hover:text-steel;
   }
-
   .active {
     @apply underline md:text-midnight;
   }
