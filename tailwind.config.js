@@ -160,7 +160,7 @@ export default {
         ".word-sm": {
           fontFamily: theme("fontFamily.zodiak"),
           fontSize: "1.8rem",
-          fontWeight: "800",
+          fontWeight: "900",
         },
         ".footer-sm": {
           fontFamily: theme("fontFamily.zodiak"),

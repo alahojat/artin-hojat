@@ -2,20 +2,44 @@
   @font-face {
     font-family: "Zodiak";
     src:
-      url("/fonts/Zodiak.woff2") format("woff2"),
-      url("/fonts/Zodiak.woff") format("woff"),
-      url("/fonts/Zodiak.ttf") format("truetype");
-    font-weight: normal;
+      url("/fonts/Zodiak-Regular.woff2") format("woff2"),
+      url("/fonts/Zodiak-Regular.woff") format("woff"),
+      url("/fonts/Zodiak-Regular.ttf") format("truetype");
+    font-weight: 400;
     font-style: normal;
+    font-display: swap;
+  }
+
+  @font-face {
+    font-family: "Zodiak";
+    src:
+      url("/fonts/Zodiak-SemiBold.woff2") format("woff2"),
+      url("/fonts/Zodiak-SemiBold.woff") format("woff"),
+      url("/fonts/Zodiak-SemiBold.ttf") format("truetype");
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+  }
+
+  @font-face {
+    font-family: "Zodiak";
+    src:
+      url("/fonts/Zodiak-Bold.woff2") format("woff2"),
+      url("/fonts/Zodiak-Bold.woff") format("woff"),
+      url("/fonts/Zodiak-Bold.ttf") format("truetype");
+    font-weight: 900;
+    font-style: normal;
+    font-display: swap;
   }
   @font-face {
     font-family: "Plus Jakarta Sans";
     src:
-      url("/fonts/PlusJakartaSans.woff2") format("woff2"),
-      url("/fonts/PlusJakartaSans.woff") format("woff"),
-      url("/fonts/PlusJakartaSans.ttf") format("truetype");
-    font-weight: normal;
+      url("/fonts/PlusJakartaSans-Regular.woff2") format("woff2"),
+      url("/fonts/PlusJakartaSans-Regular.woff") format("woff"),
+      url("/fonts/PlusJakartaSans-Regular.ttf") format("truetype");
+    font-weight: 400;
     font-style: normal;
+    font-display: swap;
   }
   .heading {
     @apply text-steel sm:heading-sm lg:heading-lg sm:my-2 lg:mx-0 lg:my-4;
