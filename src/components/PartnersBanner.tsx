@@ -39,8 +39,8 @@ export const PartnersBanner = () => {
             <img
               src={partner.src}
               alt={partner.alt}
-              height={partner.height || 50}
-              width={partner.width || 50}
+              height={partner.height}
+              width={partner.width}
               className="object-contain"
             />
           </div>

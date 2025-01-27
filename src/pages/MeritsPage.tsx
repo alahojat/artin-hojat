@@ -1,5 +1,5 @@
 import artinhojat from "/artin-hojat-2.jpg";
-import skurubasket from "/skuru-basket.jpeg";
+import skurubasket from "/skuru-basket.jpg";
 import snoh from "/snoh.jpg";
 import { workExperienceData } from "../data/WorkExperienceData.tsx";
 import { educationData } from "../data/EducationData.tsx";
@@ -16,24 +16,33 @@ export const MeritsPage = () => {
         <div className="md:grid md:grid-cols-2 lg:grid-cols-3">
           <StyledImg
             src={skurubasket}
-            alt="fdsafds"
+            alt="Artin Hojat interviewing three basketballplayers"
+            width="500px"
+            height="750px"
             photocred="Ala Hojat"
             figClassName="sm:hidden md:block"
             imgClassName="sm:h-56  object-[75%_25%] md:h-80 lg:h-96"
           ></StyledImg>
           <StyledImg
             src={snoh}
-            alt="fdsafds"
+            alt="Artin Hojat interviewing Snoh Aalegra"
+            width="700px"
+            height="446px"
             photocred="Kristian Riffo"
             figClassName="sm:hidden md:hidden lg:block"
             imgClassName="sm:h-56 md:h-80 lg:h-96"
           ></StyledImg>
-          <StyledImg
-            src={artinhojat}
-            alt="fdsafds"
-            photocred="Ala Hojat"
-            imgClassName="sm:h-56 md:h-80 lg:h-96 "
-          ></StyledImg>
+          <div className="relative">
+            <StyledImg
+              src={artinhojat}
+              alt="Artin Hojat standing on a stage with a microphone at Comic Con Nordics"
+              width="500px"
+              height="749px"
+              photocred="Ala Hojat"
+              imgClassName="sm:h-56 md:h-80 lg:h-96"
+            ></StyledImg>
+            <div className="absolute inset-0 bg-gradient-to-b from-black/60 to-steel/0 md:hidden"></div>
+          </div>
         </div>
         <div className="m-4 grid grid-cols-1 gap-4 md:mx-6 lg:mx-8 lg:grid-cols-3">
           <article className="border-t border-solid border-steel pb-2">
