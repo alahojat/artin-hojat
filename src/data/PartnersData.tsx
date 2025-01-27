@@ -1,12 +1,11 @@
 import nocco from "/brand-logos/nocco.png";
-import betteryou from "/brand-logos/betteryou-logo.webp";
-import flowlife from "/brand-logos/flowlife.avif";
+import betteryou from "/brand-logos/betteryou-logo.png";
+import flowlife from "/brand-logos/flowlife.png";
 import elliot from "/brand-logos/elliot-cadeau.png";
-import bandai from "/brand-logos/bandai-namco.svg";
-import comicCon from "/brand-logos/comic-con.png";
+import bandai from "/brand-logos/bandai-namco.png";
 import nba from "/brand-logos/nba.png";
 import sats from "/brand-logos/sats.png";
-import kingsize from "/brand-logos/kingsize.svg";
+import kingsize from "/brand-logos/kingsize.png";
 import nojesguiden from "/brand-logos/nojesguiden.png";
 
 export const PartnersData = [
@@ -67,14 +66,6 @@ export const PartnersData = [
     height: "auto",
   },
   {
-    id: 8,
-    href: "https://www.comicconstockholm.se/en/",
-    src: comicCon,
-    alt: "Logo for Comic Con Stockholm",
-    width: "80px",
-    height: "auto",
-  },
-  {
     id: 9,
     href: "https://www.kingsizemag.se/",
     src: kingsize,
@@ -83,10 +74,10 @@ export const PartnersData = [
     height: "auto",
   },
   {
-    id: 10,
-    href: "https://ng.se/stockholm",
+    id: 9,
+    href: "https://www.kingsizemag.se/",
     src: nojesguiden,
-    alt: "Logo for Nöjesguiden",
+    alt: "Logo for Kingsize Magazine",
     width: "80px",
     height: "auto",
   },

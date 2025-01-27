@@ -8,7 +8,7 @@ import { PiLinkedinLogoThin } from "react-icons/pi";
 export const Footer = () => {
   return (
     <footer className="col bg-purple sm:h-[450px] md:h-[350px] lg:h-[400px] lg:w-full lg:pb-4">
-      <div className="flex-shrink-0 bg-orange">
+      <div className="bg-purple flex-shrink-0">
         <ScrollingBanner />
       </div>
 
@@ -63,6 +63,7 @@ export const Footer = () => {
           href="https://www.instagram.com/artinhojatg"
           target="_blank"
           rel="noopener noreferrer"
+          aria-label="Visit Artin's Instagram profile"
         >
           <CiInstagram className="text-3xl text-steel" />
         </a>
@@ -70,6 +71,7 @@ export const Footer = () => {
           href="https://www.tiktok.com/@artinhojat"
           target="_blank"
           rel="noopener noreferrer"
+          aria-label="Visit Artin's TikTok profile"
         >
           <PiTiktokLogoLight className="text-3xl text-steel" />
         </a>
@@ -77,6 +79,7 @@ export const Footer = () => {
           href="https://www.youtube.com/@TheArtinprogress"
           target="_blank"
           rel="noopener noreferrer"
+          aria-label="Visit Artin's YouTube channel"
         >
           <CiYoutube className="text-3xl text-steel" />
         </a>
@@ -84,6 +87,7 @@ export const Footer = () => {
           href="https://www.linkedin.com/in/artinhojat/"
           target="_blank"
           rel="noopener noreferrer"
+          aria-label="Visit Artin's LinkedIn profile"
         >
           <PiLinkedinLogoThin className="text-3xl text-steel" />
         </a>

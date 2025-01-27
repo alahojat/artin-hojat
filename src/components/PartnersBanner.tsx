@@ -26,7 +26,7 @@ export const PartnersBanner = () => {
   })();
 
   return (
-    <div ref={handleRef} className="relative overflow-hidden bg-ice px-4">
+    <div ref={handleRef} className="relative overflow-hidden bg-steel px-4">
       <div
         className={`${
           isInView
