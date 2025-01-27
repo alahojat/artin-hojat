@@ -18,7 +18,7 @@ export const Home = () => {
   return (
     <>
       <div className="base-img-top bg-steel">
-        <section className="sm:px-6 sm:pt-24 md:px-10">
+        <section className="sm:px-6 sm:pt-36 md:px-10">
           <NavLink
             to={"/articles"}
             onClick={handleNavLinkClick}
@@ -80,6 +80,8 @@ export const Home = () => {
           <img
             src={artinhojat4}
             alt=""
+            width="500px"
+            height="618px"
             className="intersect:motion-preset-slide-left motion-delay-700 rounded object-cover grayscale hover:grayscale-0 sm:hidden md:mx-auto md:block md:w-56 lg:w-96"
           />
         </section>

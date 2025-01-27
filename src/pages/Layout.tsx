@@ -17,7 +17,7 @@ export const Layout = () => {
     setTimeout(() => {
       setShowHero(false);
       sessionStorage.setItem("heroShown", "true");
-    }, 4000);
+    }, 1000);
   }
 
   const handleHeroClick = () => {

@@ -117,4 +117,8 @@
   .active {
     @apply underline md:text-midnight;
   }
+
+  .material-symbols-outlined {
+    @apply text-5xl;
+  }
 }
