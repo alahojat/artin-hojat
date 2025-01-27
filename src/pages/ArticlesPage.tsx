@@ -45,28 +45,29 @@ export const ArticlesPage = () => {
 
   return (
     <>
-      <section className="base bg-chalk">
+      <section className="base bg-ice">
         <GoBackBtn></GoBackBtn>
-        <h2 className="subheading mt-0">The Art in Science</h2>
-        <div className="lg:row mb-6 lg:mt-6 lg:items-start">
+        <h2 className="subheading mt-0">The art:in science</h2>
+        <fieldset className="md:row mb-0 sm:mt-6 md:items-center lg:mt-6 lg:items-start">
           <input
-            className="input lg:mt-4"
+            className="input"
             type="text"
             value={searchText}
+            placeholder="Find an article"
             onChange={(e) => setSearchText(e.target.value)}
           />
-          <div className="lg:row">
-            <button className="button button-tertiary" onClick={handleSearch}>
-              Search
-            </button>
+          <div className="row">
             <button
               className="button button-secondary-dark"
               onClick={clearSearch}
             >
               Clear
             </button>
+            <button className="button" onClick={handleSearch}>
+              Search
+            </button>
           </div>
-        </div>
+        </fieldset>
 
         <ArticleCards articles={currentArticles} />
         <div className="col items-center justify-center">
