@@ -8,22 +8,33 @@ import { useState } from "react";
 export const Layout = () => {
   const error = useRouteError();
   const location = useLocation();
-  const [showHero, setShowHero] = useState(location.pathname === "/");
+  const heroAlreadyShown = sessionStorage.getItem("heroShown") === "true";
+  const [showHero, setShowHero] = useState(() => {
+    return location.pathname === "/" && !heroAlreadyShown;
+  });
 
-  const handleHeroDismiss = () => {
+  if (showHero) {
+    setTimeout(() => {
+      setShowHero(false);
+      sessionStorage.setItem("heroShown", "true");
+    }, 4000);
+  }
+
+  const handleHeroClick = () => {
     setShowHero(false);
+    sessionStorage.setItem("heroShown", "true");
   };
 
   return (
     <>
       {showHero ? (
-        <Hero onDismiss={handleHeroDismiss} />
+        <Hero onClick={handleHeroClick} />
       ) : (
-        <>
+        <div className="flex min-h-screen flex-col">
           <Menu />
-          <main>{error ? <NotFound /> : <Outlet />}</main>
+          <main className="flex-grow">{error ? <NotFound /> : <Outlet />}</main>
           <Footer />
-        </>
+        </div>
       )}
     </>
   );
