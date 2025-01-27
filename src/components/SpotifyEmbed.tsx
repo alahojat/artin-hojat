@@ -5,7 +5,7 @@ export const SpotifyEmbed = () => {
     <div>
       <iframe
         src={iframeSrc}
-        width="90%"
+        width="95%"
         height="200"
         allow="encrypted-media"
         title="Spotify Show Player"
