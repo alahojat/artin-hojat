@@ -1,6 +1,6 @@
 import { SpotifyEmbed } from "../components/SpotifyEmbed";
 import { StyledImg } from "../components/StyledImg";
-import skurubasket from "/skuru-basket.jpeg";
+import skurubasket from "/skuru-basket.jpg";
 
 export const AboutPage = () => {
   return (
