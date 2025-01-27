@@ -44,7 +44,6 @@ export default {
       fontFamily: {
         zodiak: ["Zodiak", "sans-serif"],
         "plus-jakarta-sans": ["Plus Jakarta Sans", "sans-serif"],
-        inter: ["Inter", "sans-serif"],
       },
       screens: {
         sm: "300px",
