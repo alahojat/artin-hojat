@@ -4,7 +4,7 @@ export const ContactPage = () => {
   return (
     <>
       <section className="base grid max-w-[1470px] grid-cols-1 place-items-start justify-items-center bg-steel sm:gap-0 md:grid-cols-2 md:gap-4 lg:gap-12">
-        <div>
+        <div className="max-w-prose">
           <h2 className="subheading subheading-light">Get in touch</h2>
           <p className="body body-light lg:col-span-1">
             I work with individuals from athletes to everyday patients, focusing

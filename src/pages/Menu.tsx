@@ -11,7 +11,9 @@ export const Menu = () => {
   const isDarkBackground =
     currentPath === "/contact" ||
     currentPath === "/player-optimization" ||
-    currentPath === "/merits";
+    currentPath === "/merits" ||
+    currentPath === "/about" ||
+    currentPath === "/";
 
   const logo = isDarkBackground ? lightLogo : defaultLogo;
 
@@ -22,6 +24,11 @@ export const Menu = () => {
   };
 
   const handleNavLinkClick = () => {
+    window.scroll({
+      top: 0,
+      left: 0,
+      behavior: "auto",
+    });
     if (menuIsOpen) {
       setMenuIsOpen(false);
     }
@@ -30,7 +37,7 @@ export const Menu = () => {
   return (
     <>
       <>
-        <header className="z-20 w-full sm:absolute sm:left-0 sm:top-0 md:fixed md:flex md:h-16 md:items-center md:justify-between md:bg-snow md:px-8 md:py-2">
+        <header className="z-20 w-full sm:absolute sm:left-0 sm:top-0 md:fixed md:flex md:h-12 md:items-center md:justify-between md:bg-snow md:px-8 md:py-2">
           <section className="mr-5 mt-5 flex justify-end md:hidden">
             <div
               className={`menu-button ${menuIsOpen ? "menu-open" : ""}`}
@@ -60,14 +67,14 @@ export const Menu = () => {
               <div className="orange-circle" onClick={toggleMenu}></div>
             </div>
 
-            <ul className="menu overflow-x-auto p-4 sm:mt-10 sm:text-right md:mt-0 md:flex md:flex-wrap md:items-start md:gap-4 md:overflow-visible md:text-left lg:gap-10">
+            <ul className="menu overflow-x-auto p-4 sm:mt-10 sm:text-right md:mt-0 md:flex md:flex-wrap md:items-start md:gap-4 md:overflow-visible md:text-left lg:gap-10 lg:hover:text-midnight">
               <li>
                 <NavLink
                   to={"/articles"}
                   onClick={handleNavLinkClick}
                   className={({ isActive }) => (isActive ? "active" : "")}
                 >
-                  The art in Science
+                  The art:in Science
                 </NavLink>
               </li>
               <li>
@@ -87,12 +94,6 @@ export const Menu = () => {
               <li>
                 <NavLink to={"/merits"} onClick={handleNavLinkClick}>
                   Merits
-                </NavLink>
-              </li>
-
-              <li>
-                <NavLink to={"/partners"} onClick={handleNavLinkClick}>
-                  Partners
                 </NavLink>
               </li>
               <li>
@@ -116,7 +117,7 @@ export const Menu = () => {
               <img
                 src={logo}
                 alt={"artin hojat logo"}
-                className="ml-4 hidden h-16 w-16 cursor-pointer md:block"
+                className="ml-4 hidden h-12 w-12 cursor-pointer md:block"
               />
             </a>
           </nav>

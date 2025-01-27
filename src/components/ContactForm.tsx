@@ -104,7 +104,7 @@ export const ContactForm = () => {
             <label className="label" htmlFor="message">
               Message
             </label>
-            <div className="h-52">
+            <div className="sm:h-44 md:h-52">
               <Field
                 as="textarea"
                 id="message"

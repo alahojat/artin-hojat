@@ -1,8 +1,8 @@
 @layer components {
   .button {
-    @apply m-4 min-h-8 cursor-pointer content-center items-center rounded border border-transparent bg-midnight px-3 text-center font-zodiak text-base uppercase text-snow sm:min-w-16 lg:min-w-24;
+    @apply mx-2 my-2 min-h-8 cursor-pointer content-center items-center rounded border border-transparent bg-slate px-4 text-center font-zodiak text-base text-snow sm:min-w-16 lg:min-w-24;
     &:hover {
-      @apply bg-slate;
+      @apply bg-midnight;
     }
     &:active {
       @apply bg-slate text-steel;
@@ -42,16 +42,19 @@
   .input {
     @apply s:w-[19rem] m-1 h-9 rounded bg-snow p-2 sm:body-sm lg:body-lg sm:w-64 md:w-[20rem] lg:w-[30rem];
     &:hover {
-      @apply bg-ice;
+      @apply border border-slate bg-chalk;
     }
   }
 
   .textarea {
-    @apply s:w-[19rem] m-1 resize-none rounded bg-snow p-3 text-base sm:h-32 sm:w-64 md:h-40 md:w-[20rem] lg:w-[30rem];
+    @apply s:w-[19rem] mt-1 resize-none rounded bg-snow p-3 text-base sm:h-32 sm:w-64 md:h-40 md:w-[20rem] lg:w-[30rem];
+    &:hover {
+      @apply bg-ice;
+    }
   }
 
   .hero {
-    @apply flex min-h-screen w-full flex-col items-center justify-center bg-[url('../src/assets/article-img/artin-melwin.jpeg')] bg-cover bg-center bg-no-repeat p-5 text-center lg:bg-top;
+    @apply flex min-h-screen w-full flex-col items-center justify-center bg-steel p-5 text-center lg:bg-top;
   }
 
   .row {

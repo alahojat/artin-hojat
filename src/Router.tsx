@@ -5,7 +5,6 @@ import { Layout } from "./pages/Layout";
 import { AboutPage } from "./pages/AboutPage";
 import { ArticlesPage } from "./pages/ArticlesPage";
 import { MeritsPage } from "./pages/MeritsPage";
-import { PartnersPage } from "./pages/PartnersPage";
 import { ContactPage } from "./pages/ContactPage";
 import { PlayerPage } from "./pages/PlayerPage";
 import { SingleArticlesPage } from "./pages/SingleArticlesPage";
@@ -42,10 +41,6 @@ export const router = createBrowserRouter([
       {
         path: "/merits",
         element: <MeritsPage></MeritsPage>,
-      },
-      {
-        path: "/partners",
-        element: <PartnersPage></PartnersPage>,
       },
       {
         path: "/player-optimization",

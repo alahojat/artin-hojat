@@ -13,10 +13,11 @@ export default {
         chalk: "#b8b8b8",
         ice: "#a7aeb4",
         snow: {
-          DEFAULT: "#dedede",
+          DEFAULT: "#FAFAFA",
           low: "rgba(222, 222, 222, 0.8)",
         },
         orange: "#d98443",
+        purple: "#7656CD",
         slate: "#576884",
         steel: {
           DEFAULT: "#29292d",
@@ -55,9 +56,19 @@ export default {
       },
       animation: {
         "marquee-start": "marquee-start 50s linear infinite",
+        "slide-horizontal": "slide-horizontal 20s linear infinite",
+        scroll: "scroll 30s linear infinite",
       },
       keyframes: {
         "marquee-start": {
+          "0%": { transform: "translateX(0)" },
+          "100%": { transform: "translateX(-90%)" },
+        },
+        "slide-horizontal": {
+          "0%": { transform: "translateX(100%)" },
+          "100%": { transform: "translateX(-100%)" },
+        },
+        scroll: {
           "0%": { transform: "translateX(0)" },
           "100%": { transform: "translateX(-100%)" },
         },
@@ -72,7 +83,6 @@ export default {
           fontSize: "6rem",
           fontWeight: "normal",
           margin: "2rem",
-          fontStyle: "italic",
           lineHeight: "100%",
         },
         ".heading-sm": {
@@ -88,9 +98,9 @@ export default {
         },
         ".subheading-sm": {
           fontFamily: theme("fontFamily.zodiak"),
-          fontSize: "3rem",
+          fontSize: "2.5rem",
           fontWeight: "600",
-          lineHeight: "100%",
+          lineHeight: "120%",
         },
         ".subheading-alt-lg": {
           fontFamily: theme("fontFamily.zodiak"),
@@ -106,13 +116,13 @@ export default {
         },
         ".excerpt-lg": {
           fontFamily: theme("fontFamily.plus-jakarta-sans"),
-          fontSize: "2rem",
+          fontSize: "1.6rem",
           fontWeight: "400",
           lineHeight: "120%",
         },
         ".excerpt-sm": {
           fontFamily: theme("fontFamily.plus-jakarta-sans"),
-          fontSize: "1.3rem",
+          fontSize: "1.4rem",
           fontWeight: "400",
           lineHeight: "150%",
         },
@@ -120,13 +130,13 @@ export default {
           fontFamily: theme("fontFamily.plus-jakarta-sans"),
           fontSize: "1.2rem",
           fontWeight: "400",
-          lineHeight: "150%",
+          lineHeight: "160%",
         },
         ".body-sm": {
           fontFamily: theme("fontFamily.plus-jakarta-sans"),
-          fontSize: "1.2rem",
+          fontSize: "1.1rem",
           fontWeight: "400",
-          lineHeight: "150%",
+          lineHeight: "160%",
         },
         ".body-alt-lg": {
           fontFamily: theme("fontFamily.plus-jakarta-sans"),
@@ -140,7 +150,7 @@ export default {
         },
         ".word-lg": {
           fontFamily: theme("fontFamily.zodiak"),
-          fontSize: "1.2rem",
+          fontSize: "1rem",
           fontWeight: "400",
         },
         ".word-md": {
@@ -160,7 +170,7 @@ export default {
         },
         ".footer-lg": {
           fontFamily: theme("fontFamily.zodiak"),
-          fontSize: "1.1rem",
+          fontSize: "1rem",
           fontWeight: "400",
         },
         ".copyright-sm": {
@@ -181,7 +191,7 @@ export default {
         },
         ".photocred-lg": {
           fontFamily: theme("fontFamily.plus-jakarta-sans"),
-          fontSize: "0.7rem",
+          fontSize: "0.6rem",
           fontWeight: "400",
         },
       });
