@@ -118,6 +118,7 @@ export const Menu = () => {
                 src={logo}
                 alt={"artin hojat logo"}
                 className="ml-4 hidden h-12 w-12 cursor-pointer md:block"
+                aria-label="Return to home"
               />
             </a>
           </nav>
