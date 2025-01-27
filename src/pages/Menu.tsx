@@ -12,7 +12,6 @@ export const Menu = () => {
     currentPath === "/contact" ||
     currentPath === "/player-optimization" ||
     currentPath === "/merits" ||
-    currentPath === "/about" ||
     currentPath === "/";
 
   const logo = isDarkBackground ? lightLogo : defaultLogo;
@@ -38,16 +37,24 @@ export const Menu = () => {
     <>
       <>
         <header className="z-20 w-full sm:absolute sm:left-0 sm:top-0 md:fixed md:flex md:h-12 md:items-center md:justify-between md:bg-snow md:px-8 md:py-2">
-          <section className="mr-5 mt-5 flex justify-end md:hidden">
-            <div
-              className={`menu-button ${menuIsOpen ? "menu-open" : ""}`}
-              onClick={toggleMenu}
-            >
-              <img
-                src={logo}
-                alt={menuIsOpen ? "Close menu" : "Open menu"}
-                className="h-16 w-16 cursor-pointer"
-              />
+          <section className="mr-5 flex justify-end">
+            <div className="row w-full items-center justify-between sm:mt-4 md:mt-0">
+              <a href="/">
+                <img
+                  src={logo}
+                  alt={"artin hojat logo"}
+                  className="cursor-pointer justify-start sm:ml-6 sm:mt-2 sm:h-16 sm:w-16 md:h-10 md:w-10 lg:ml-2"
+                  aria-label="Return to home"
+                />
+              </a>
+              <div
+                className={`menu-button ${menuIsOpen ? "menu-open" : ""}`}
+                onClick={toggleMenu}
+              >
+                <i className="cursor-pointer text-orange md:hidden">
+                  <span className="material-symbols-outlined">more_vert</span>
+                </i>
+              </div>
             </div>
 
             {menuIsOpen && (
@@ -67,7 +74,7 @@ export const Menu = () => {
               <div className="orange-circle" onClick={toggleMenu}></div>
             </div>
 
-            <ul className="menu overflow-x-auto p-4 sm:mt-10 sm:text-right md:mt-0 md:flex md:flex-wrap md:items-start md:gap-4 md:overflow-visible md:text-left lg:gap-10 lg:hover:text-midnight">
+            <ul className="menu overflow-x-auto p-4 sm:mt-10 sm:text-right md:mt-0 md:flex md:flex-wrap md:items-end md:gap-4 md:overflow-visible md:text-right lg:gap-10 lg:hover:text-midnight">
               <li>
                 <NavLink
                   to={"/articles"}
@@ -102,25 +109,6 @@ export const Menu = () => {
                 </NavLink>
               </li>
             </ul>
-
-            <a
-              href="/"
-              onClick={(e) => {
-                if (menuIsOpen) {
-                  e.preventDefault();
-                  toggleMenu();
-                } else {
-                  handleNavLinkClick();
-                }
-              }}
-            >
-              <img
-                src={logo}
-                alt={"artin hojat logo"}
-                className="ml-4 hidden h-12 w-12 cursor-pointer md:block"
-                aria-label="Return to home"
-              />
-            </a>
           </nav>
         </header>
       </>
