@@ -6,17 +6,9 @@ import { scrollToTop } from "../utils/scrollToTop";
 
 export const Menu = () => {
   const [menuIsOpen, setMenuIsOpen] = useState(false);
-
   const currentPath = window.location.pathname;
-
-  const isDarkBackground =
-    currentPath === "/contact" ||
-    currentPath === "/player-optimization" ||
-    currentPath === "/merits" ||
-    currentPath === "/about" ||
-    currentPath === "/";
-
-  const logo = isDarkBackground ? lightLogo : defaultLogo;
+  const isLightBackground = currentPath === "/articles";
+  const logo = isLightBackground ? defaultLogo : lightLogo;
 
   const toggleMenu = () => {
     console.log("is menu opening");
@@ -49,7 +41,11 @@ export const Menu = () => {
                 className={`menu-button ${menuIsOpen ? "menu-open" : ""}`}
                 onClick={toggleMenu}
               >
-                <i className="cursor-pointer text-orange md:hidden">
+                <i
+                  className={`cursor-pointer ${
+                    isLightBackground ? "text-steel" : "text-orange"
+                  } md:hidden`}
+                >
                   <span className="material-symbols-outlined">more_vert</span>
                 </i>
               </div>
