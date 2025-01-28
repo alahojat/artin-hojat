@@ -19,7 +19,7 @@ export const ArticleCards = ({ articles }: IArticlesCardProps) => {
           key={article.id}
           className="article-card intersect:motion-preset-fade mt-6 p-2"
         >
-          <p className="body-alt inline rounded bg-orange px-2">
+          <p className="body-alt inline px-2">
             {new Date(article.date).toLocaleDateString("en-GB", {
               day: "2-digit",
               month: "long",
