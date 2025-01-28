@@ -13,6 +13,7 @@ export const Menu = () => {
     currentPath === "/contact" ||
     currentPath === "/player-optimization" ||
     currentPath === "/merits" ||
+    currentPath === "/about" ||
     currentPath === "/";
 
   const logo = isDarkBackground ? lightLogo : defaultLogo;
@@ -32,15 +33,15 @@ export const Menu = () => {
 
   return (
     <>
-      <>
-        <header className="z-20 w-full sm:absolute sm:left-0 sm:top-0 md:fixed md:flex md:h-12 md:items-center md:justify-between md:bg-snow md:px-8 md:py-2">
-          <section className="mr-5 flex justify-end">
-            <div className="row w-full items-center justify-between sm:mt-4 md:mt-0">
+      <div className="col z-20 w-screen items-center bg-snow md:fixed md:h-12">
+        <header className="fixed z-20 w-full max-w-[1500px] sm:absolute sm:left-0 sm:top-0 md:fixed md:left-1/2 md:flex md:h-12 md:-translate-x-1/2 md:items-center md:justify-between md:gap-12 md:px-12 md:py-2">
+          <section className="mr-5">
+            <div className="row left-0 top-0 w-full items-center justify-between sm:mt-4 md:fixed md:mt-0">
               <a href="/">
                 <img
                   src={logo}
                   alt={"artin hojat logo"}
-                  className="cursor-pointer justify-start sm:ml-6 sm:mt-2 sm:h-16 sm:w-16 md:h-10 md:w-10 lg:ml-2"
+                  className="cursor-pointer justify-start sm:ml-6 sm:mt-2 sm:h-16 sm:w-16 md:h-10 md:w-10 lg:ml-10"
                   aria-label="Return to home"
                 />
               </a>
@@ -108,7 +109,7 @@ export const Menu = () => {
             </ul>
           </nav>
         </header>
-      </>
+      </div>
     </>
   );
 };
