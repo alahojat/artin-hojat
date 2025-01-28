@@ -1,29 +1,8 @@
-import { useState } from "react";
+import { useIsInView } from "../hooks/useIsInView";
 import { PartnersData } from "../data/PartnersData";
 
 export const PartnersBanner = () => {
-  const [isInView, setIsInView] = useState(false);
-
-  const handleRef = (() => {
-    let observer: IntersectionObserver | null = null;
-
-    return (node: HTMLDivElement | null) => {
-      if (observer) {
-        observer.disconnect();
-      }
-
-      if (node) {
-        observer = new IntersectionObserver(
-          ([entry]) => {
-            setIsInView(entry.isIntersecting);
-          },
-          { threshold: 0.1 },
-        );
-
-        observer.observe(node);
-      }
-    };
-  })();
+  const [handleRef, isInView] = useIsInView();
 
   return (
     <div ref={handleRef} className="relative overflow-hidden bg-steel px-4">
