@@ -41,64 +41,66 @@ export const ArticlesPage = () => {
 
   return (
     <>
-      <section className="base bg-ice">
-        <h2 className="subheading mt-0">The art:in science</h2>
-        <fieldset className="md:row mb-0 sm:mt-6 md:items-center lg:mt-6 lg:items-start">
-          <input
-            className="input"
-            type="text"
-            value={searchText}
-            placeholder="Find an article"
-            onChange={(e) => setSearchText(e.target.value)}
-          />
-          <div className="row">
-            <button
-              className="button button-secondary-dark"
-              onClick={clearSearch}
-            >
-              Clear
-            </button>
-            <button className="button" onClick={handleSearch}>
-              Search
-            </button>
-          </div>
-        </fieldset>
-        {filteredArticles.length === 0 ? (
-          <p className="body mt-6 text-center">
-            No articles were found, please try using another word!
-          </p>
-        ) : (
-          <>
-            <ArticleCards articles={currentArticles} />
-            <div className="col items-center justify-center">
-              <Pagination
-                current={pageIndex}
-                total={filteredArticles.length}
-                pageSize={articlesPerPage}
-                showSizeChanger={true}
-                showQuickJumper={false}
-                itemRender={(page, type) => {
-                  if (type === "prev" || type === "next") {
-                    return null;
-                  }
-                  return (
-                    <button
-                      className={`${
-                        page === pageIndex ? "text-midnight" : "text-steel"
-                      }`}
-                    >
-                      {page}
-                    </button>
-                  );
-                }}
-                hideOnSinglePage={true}
-                onChange={handlePageChange}
-                className="row body gap-3 text-steel"
-              />
+      <div className="base-container bg-ice">
+        <section className="base">
+          <h2 className="subheading mt-0">The art:in science</h2>
+          <fieldset className="md:row mb-0 sm:mt-6 md:items-center lg:mt-6 lg:items-start">
+            <input
+              className="input"
+              type="text"
+              value={searchText}
+              placeholder="Find an article"
+              onChange={(e) => setSearchText(e.target.value)}
+            />
+            <div className="row">
+              <button
+                className="button button-secondary-dark"
+                onClick={clearSearch}
+              >
+                Clear
+              </button>
+              <button className="button" onClick={handleSearch}>
+                Search
+              </button>
             </div>
-          </>
-        )}
-      </section>
+          </fieldset>
+          {filteredArticles.length === 0 ? (
+            <p className="body mt-6 text-center">
+              No articles were found, please try using another word!
+            </p>
+          ) : (
+            <>
+              <ArticleCards articles={currentArticles} />
+              <div className="col items-center justify-center">
+                <Pagination
+                  current={pageIndex}
+                  total={filteredArticles.length}
+                  pageSize={articlesPerPage}
+                  showSizeChanger={true}
+                  showQuickJumper={false}
+                  itemRender={(page, type) => {
+                    if (type === "prev" || type === "next") {
+                      return null;
+                    }
+                    return (
+                      <button
+                        className={`${
+                          page === pageIndex ? "text-midnight" : "text-steel"
+                        }`}
+                      >
+                        {page}
+                      </button>
+                    );
+                  }}
+                  hideOnSinglePage={true}
+                  onChange={handlePageChange}
+                  className="row body gap-3 text-steel"
+                />
+              </div>
+            </>
+          )}
+        </section>
+      </div>
     </>
   );
 };

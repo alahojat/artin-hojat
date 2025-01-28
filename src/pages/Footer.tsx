@@ -13,7 +13,7 @@ export const Footer = () => {
       </div>
 
       <div className="col md:row mx-4 flex-1 items-center justify-center sm:gap-8 lg:gap-80">
-        <div className="mx-2 grid grid-cols-2 sm:gap-20 md:gap-24 lg:max-w-[1100px]">
+        <div className="mx-2 grid grid-cols-2 sm:gap-20 md:gap-24 lg:max-w-[1500px]">
           <ul className="footer a space-y-2 text-left text-snow">
             <li className="hover:text-steel">
               <a href="/" className="whitespace-nowrap">
