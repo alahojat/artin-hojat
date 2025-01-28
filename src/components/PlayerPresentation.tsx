@@ -12,6 +12,8 @@ export const PlayerPresentation = () => {
                 <StyledImg
                   src={player.url}
                   alt={player.description}
+                  width="375"
+                  height="500"
                   figClassName="aspect-h-4 aspect-w-3"
                 ></StyledImg>
                 <div className="col absolute inset-0 items-center justify-center bg-steel bg-opacity-80 p-4 opacity-0 transition-opacity duration-300 ease-in-out group-hover:opacity-100">

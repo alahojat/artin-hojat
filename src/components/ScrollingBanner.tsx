@@ -1,32 +1,7 @@
-import { useState } from "react";
+import { useIsInView } from "../hooks/useIsInView";
 
 export const ScrollingBanner = () => {
-  const [isInView, setIsInView] = useState(false);
-
-  const handleRef = (() => {
-    let observer: IntersectionObserver | null = null;
-
-    return (node: HTMLDivElement | null) => {
-      if (observer) {
-        observer.disconnect();
-      }
-
-      if (node) {
-        observer = new IntersectionObserver(
-          ([entry]) => {
-            if (entry.isIntersecting) {
-              setIsInView(true);
-            } else {
-              setIsInView(false);
-            }
-          },
-          { threshold: 0.1 },
-        );
-
-        observer.observe(node);
-      }
-    };
-  })();
+  const [handleRef, isInView] = useIsInView();
 
   return (
     <div

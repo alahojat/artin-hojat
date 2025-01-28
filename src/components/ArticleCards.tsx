@@ -2,6 +2,7 @@ import { Link } from "react-router-dom";
 import { IArticle } from "../models/IArticles";
 import parse from "html-react-parser";
 import { StyledImg } from "./StyledImg";
+import { scrollToTop } from "../utils/scrollToTop";
 
 interface IArticlesCardProps {
   articles: IArticle[];
@@ -9,7 +10,7 @@ interface IArticlesCardProps {
 
 export const ArticleCards = ({ articles }: IArticlesCardProps) => {
   const handleClick = () => {
-    window.scrollTo(0, 0);
+    scrollToTop("auto");
   };
   return (
     <section className="grid grid-cols-1 gap-0 md:grid-cols-3 lg:mt-4 lg:grid-cols-4">
@@ -18,7 +19,7 @@ export const ArticleCards = ({ articles }: IArticlesCardProps) => {
           key={article.id}
           className="article-card intersect:motion-preset-fade mt-6 p-2"
         >
-          <p className="body-alt inline rounded bg-orange px-2">
+          <p className="body-alt inline px-2">
             {new Date(article.date).toLocaleDateString("en-GB", {
               day: "2-digit",
               month: "long",
