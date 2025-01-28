@@ -84,7 +84,7 @@ export const ArticlesPage = () => {
                     }
                     return (
                       <button
-                        className={`${
+                        className={`w-6 ${
                           page === pageIndex ? "text-midnight" : "text-steel"
                         }`}
                       >
@@ -94,7 +94,7 @@ export const ArticlesPage = () => {
                   }}
                   hideOnSinglePage={true}
                   onChange={handlePageChange}
-                  className="row body gap-3 text-steel"
+                  className="row body gap-6 text-xl text-steel"
                 />
               </div>
             </>

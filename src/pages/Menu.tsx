@@ -11,8 +11,6 @@ export const Menu = () => {
   const logo = isLightBackground ? defaultLogo : lightLogo;
 
   const toggleMenu = () => {
-    console.log("is menu opening");
-
     setMenuIsOpen(!menuIsOpen);
   };
 
@@ -71,7 +69,7 @@ export const Menu = () => {
             <ul className="menu overflow-x-auto p-4 sm:mt-10 sm:text-right md:mt-0 md:flex md:flex-wrap md:items-end md:gap-4 md:overflow-visible md:text-right lg:gap-10 lg:hover:text-midnight">
               <li>
                 <NavLink
-                  to={"/articles"}
+                  to="/articles"
                   onClick={handleNavLinkClick}
                   className={({ isActive }) => (isActive ? "active" : "")}
                 >
@@ -79,26 +77,23 @@ export const Menu = () => {
                 </NavLink>
               </li>
               <li>
-                <NavLink
-                  to={"/player-optimization"}
-                  onClick={handleNavLinkClick}
-                >
+                <NavLink to="/player-optimization" onClick={handleNavLinkClick}>
                   Player optimization
                 </NavLink>
               </li>
               <li>
-                <NavLink to={"/contact"} onClick={handleNavLinkClick}>
+                <NavLink to="/contact" onClick={handleNavLinkClick}>
                   Contact
                 </NavLink>
               </li>
 
               <li>
-                <NavLink to={"/merits"} onClick={handleNavLinkClick}>
+                <NavLink to="/merits" onClick={handleNavLinkClick}>
                   Merits
                 </NavLink>
               </li>
               <li>
-                <NavLink to={"/about"} onClick={handleNavLinkClick}>
+                <NavLink to="/about" onClick={handleNavLinkClick}>
                   About
                 </NavLink>
               </li>
