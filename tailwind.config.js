@@ -16,7 +16,7 @@ export default {
           DEFAULT: "#FAFAFA",
           low: "rgba(222, 222, 222, 0.8)",
         },
-        orange: "#d98443",
+        orange: "#F48734",
         purple: "#7656CD",
         slate: "#576884",
         steel: {
@@ -144,7 +144,7 @@ export default {
         },
         ".body-alt-sm": {
           fontFamily: theme("fontFamily.plus-jakarta-sans"),
-          fontSize: "1rem",
+          fontSize: "0.9rem",
           fontWeight: "400",
         },
         ".word-lg": {
