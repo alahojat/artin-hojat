@@ -5,14 +5,11 @@ import melwin from "/melwin-pantzar.png";
 import artinhojat4 from "/artin-hojat-4.jpg";
 import dunk from "/dunk.jpg";
 import { NavLink } from "react-router-dom";
+import { scrollToTop } from "../utils/scrollToTop";
 
 export const Home = () => {
   const handleNavLinkClick = () => {
-    window.scroll({
-      top: 0,
-      left: 0,
-      behavior: "auto",
-    });
+    scrollToTop("auto");
   };
 
   return (
@@ -28,7 +25,6 @@ export const Home = () => {
             <FaLongArrowAltRight className="inline align-middle" />
           </NavLink>
         </section>
-
         <section className="col intersect:motion-preset-slide-left motion-delay-300 items-end space-y-4 sm:p-6 md:px-10">
           <img
             src={dunk}
@@ -39,7 +35,6 @@ export const Home = () => {
           />
           <h2 className="subheading text-right text-orange">Performance</h2>
         </section>
-
         <section className="intersect:motion-preset-slide-right motion-delay-700 h-64 bg-steel sm:p-6 md:px-10">
           <NavLink
             to={"/player-optimization"}
@@ -53,7 +48,6 @@ export const Home = () => {
             Elevate your health, productivity, and happiness.
           </h2>
         </section>
-
         <section className="grid bg-steel sm:grid-cols-1 sm:px-6 sm:py-6 md:grid-cols-2 md:px-10 lg:py-12">
           <img
             src={melwin}
@@ -62,7 +56,6 @@ export const Home = () => {
             alt="A basketballplayer and a coach standing on the court"
             className="intersect:motion-preset-slide-right motion-delay-700 rounded object-cover grayscale hover:grayscale-0 sm:w-64 md:mx-auto"
           />
-
           <NavLink
             to={"/contact"}
             onClick={handleNavLinkClick}
@@ -74,7 +67,6 @@ export const Home = () => {
         <section className="border-y border-orange">
           <PartnersBanner />
         </section>
-
         <section className="mx-auto grid place-items-center bg-steel sm:grid-cols-1 sm:px-4 sm:py-20 md:grid-cols-2">
           <ContactForm></ContactForm>
           <img

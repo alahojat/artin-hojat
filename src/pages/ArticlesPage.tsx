@@ -3,6 +3,7 @@ import { ArticleCards } from "../components/ArticleCards";
 import { IArticle, IArticlesResponse } from "../models/IArticles";
 import { useState } from "react";
 import Pagination from "rc-pagination";
+import { scrollToTop } from "../utils/scrollToTop";
 
 export const ArticlesPage = () => {
   const articles = useLoaderData() as IArticlesResponse;
@@ -28,11 +29,7 @@ export const ArticlesPage = () => {
 
   const handlePageChange = (page: number) => {
     setPageIndex(page);
-    window.scroll({
-      top: 0,
-      left: 0,
-      behavior: "auto",
-    });
+    scrollToTop("auto");
   };
 
   const indexOfLastArticle = pageIndex * articlesPerPage;
@@ -66,34 +63,41 @@ export const ArticlesPage = () => {
             </button>
           </div>
         </fieldset>
-
-        <ArticleCards articles={currentArticles} />
-        <div className="col items-center justify-center">
-          <Pagination
-            current={pageIndex}
-            total={filteredArticles.length}
-            pageSize={articlesPerPage}
-            showSizeChanger={true}
-            showQuickJumper={false}
-            itemRender={(page, type) => {
-              if (type === "prev" || type === "next") {
-                return null;
-              }
-              return (
-                <button
-                  className={`${
-                    page === pageIndex ? "text-midnight" : "text-steel"
-                  }`}
-                >
-                  {page}
-                </button>
-              );
-            }}
-            hideOnSinglePage={true}
-            onChange={handlePageChange}
-            className="row body gap-3 text-steel"
-          />
-        </div>
+        {filteredArticles.length === 0 ? (
+          <p className="body mt-6 text-center">
+            No articles were found, please try using another word!
+          </p>
+        ) : (
+          <>
+            <ArticleCards articles={currentArticles} />
+            <div className="col items-center justify-center">
+              <Pagination
+                current={pageIndex}
+                total={filteredArticles.length}
+                pageSize={articlesPerPage}
+                showSizeChanger={true}
+                showQuickJumper={false}
+                itemRender={(page, type) => {
+                  if (type === "prev" || type === "next") {
+                    return null;
+                  }
+                  return (
+                    <button
+                      className={`${
+                        page === pageIndex ? "text-midnight" : "text-steel"
+                      }`}
+                    >
+                      {page}
+                    </button>
+                  );
+                }}
+                hideOnSinglePage={true}
+                onChange={handlePageChange}
+                className="row body gap-3 text-steel"
+              />
+            </div>
+          </>
+        )}
       </section>
     </>
   );
