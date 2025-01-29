@@ -1,8 +1,8 @@
-import { useLoaderData } from "react-router-dom";
-import { ArticleCards } from "../components/ArticleCards";
-import { IArticle, IArticlesResponse } from "../models/IArticles";
 import { useState } from "react";
+import { useLoaderData } from "react-router-dom";
 import Pagination from "rc-pagination";
+import { IArticle, IArticlesResponse } from "../models/IArticles";
+import { ArticleCards } from "../components/ArticleCards";
 import { scrollToTop } from "../utils/scrollToTop";
 
 export const ArticlesPage = () => {

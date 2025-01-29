@@ -1,9 +1,9 @@
+import { useState } from "react";
 import { Outlet, useLocation, useRouteError } from "react-router-dom";
 import { NotFound } from "./NotFound";
 import { Footer } from "./Footer";
 import { Menu } from "./Menu";
 import { Hero } from "./Hero";
-import { useState } from "react";
 
 export const Layout = () => {
   const error = useRouteError();

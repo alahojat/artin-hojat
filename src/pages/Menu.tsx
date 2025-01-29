@@ -1,8 +1,8 @@
 import { useState } from "react";
 import { NavLink } from "react-router-dom";
+import { scrollToTop } from "../utils/scrollToTop";
 import defaultLogo from "/site-logo/artin-hojat-steel.svg";
 import lightLogo from "/site-logo/artin-hojat-fill-orange-bg.svg";
-import { scrollToTop } from "../utils/scrollToTop";
 
 export const Menu = () => {
   const [menuIsOpen, setMenuIsOpen] = useState(false);

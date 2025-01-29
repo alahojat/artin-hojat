@@ -1,8 +1,8 @@
-import { useLoaderData } from "react-router-dom";
-import { IArticle, IMedia } from "../models/IArticles";
-import { cleanContent } from "../utils/htmlParser";
 import striptags from "striptags";
 import parse from "html-react-parser";
+import { cleanContent } from "../utils/htmlParser";
+import { useLoaderData } from "react-router-dom";
+import { IArticle, IMedia } from "../models/IArticles";
 import { GoBackBtn } from "./GoBackBtn";
 import { StyledImg } from "./StyledImg";
 

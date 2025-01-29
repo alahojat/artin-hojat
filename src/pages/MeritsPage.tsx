@@ -1,10 +1,10 @@
-import artinhojat from "/artin-hojat-2.jpg";
-import skurubasket from "/skuru-basket.jpg";
-import snoh from "/snoh.jpg";
 import { workExperienceData } from "../data/WorkExperienceData.tsx";
 import { educationData } from "../data/EducationData.tsx";
 import { journalisticData } from "../data/JournalisticData.tsx";
 import { StyledImg } from "../components/StyledImg.tsx";
+import artinhojat from "/artin-hojat-2.jpg";
+import skurubasket from "/skuru-basket.jpg";
+import snoh from "/snoh.jpg";
 
 export const MeritsPage = () => {
   const work = workExperienceData;
