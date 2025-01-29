@@ -1,6 +1,6 @@
+import parse from "html-react-parser";
 import { Link } from "react-router-dom";
 import { IArticle } from "../models/IArticles";
-import parse from "html-react-parser";
 import { StyledImg } from "./StyledImg";
 import { scrollToTop } from "../utils/scrollToTop";
 
@@ -42,12 +42,10 @@ export const ArticleCards = ({ articles }: IArticlesCardProps) => {
           <Link
             to={`/articles/${article.id}`}
             className="cursor-pointer hover:text-midnight hover:underline"
+            aria-label="Read more about this article"
             onClick={handleClick}
           >
-            <p
-              aria-label="Read more about this article"
-              className="body-alt m-0 hover:text-midnight hover:underline"
-            >
+            <p className="body-alt m-0 hover:text-midnight hover:underline">
               Read more
             </p>
           </Link>
