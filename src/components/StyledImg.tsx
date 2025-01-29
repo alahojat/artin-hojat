@@ -27,7 +27,6 @@ export const StyledImg = ({
         width={width}
         height={height}
         className={`w-full object-cover ${imgClassName}`}
-        loading="lazy"
       />
       {photocred && (
         <figcaption className={`${captionClassName}`}>

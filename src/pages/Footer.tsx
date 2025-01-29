@@ -1,9 +1,9 @@
-import circleLogo from "/site-logo/artin-hojat-circle.svg";
-import { CiYoutube } from "react-icons/ci";
 import { ScrollingBanner } from "../components/ScrollingBanner";
+import { CiYoutube } from "react-icons/ci";
 import { CiInstagram } from "react-icons/ci";
 import { PiTiktokLogoLight } from "react-icons/pi";
 import { PiLinkedinLogoThin } from "react-icons/pi";
+import circleLogo from "/site-logo/artin-hojat-circle.svg";
 
 export const Footer = () => {
   return (

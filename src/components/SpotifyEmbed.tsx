@@ -1,6 +1,5 @@
 export const SpotifyEmbed = () => {
   const iframeSrc = `https://open.spotify.com/embed/show/5JTNlIk5jpGpZf0Ri6b84N?theme=0`;
-
   return (
     <div>
       <iframe

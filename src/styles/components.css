@@ -38,33 +38,27 @@
       }
     }
   }
-
   .input {
     @apply s:w-[19rem] m-1 h-9 rounded bg-snow p-2 sm:body-sm lg:body-lg sm:w-64 md:w-[20rem] lg:w-[30rem];
     &:hover {
       @apply border border-slate bg-chalk;
     }
   }
-
   .textarea {
     @apply s:w-[19rem] mt-1 resize-none rounded bg-snow p-3 text-base sm:h-32 sm:w-64 md:h-40 md:w-[20rem] lg:w-[30rem];
     &:hover {
       @apply bg-ice;
     }
   }
-
   .hero {
     @apply flex min-h-screen w-full flex-col items-center justify-center bg-steel p-5 text-center lg:bg-top;
   }
-
   .row {
     @apply flex flex-row;
   }
-
   .col {
     @apply flex flex-col;
   }
-
   .orange-circle {
     @apply flex h-16 w-16 items-center justify-center rounded-full border-4 border-orange;
   }

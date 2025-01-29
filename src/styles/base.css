@@ -27,7 +27,7 @@
     @apply col w-full items-center justify-center;
   }
   .base {
-    @apply w-full max-w-[1500px] flex-grow items-center pt-24 sm:px-[20px] sm:pb-16 md:px-12 lg:px-16 lg:pb-10 lg:pt-32;
+    @apply w-full max-w-[1500px] flex-grow items-center sm:px-[20px] sm:pb-16 sm:pt-32 md:px-12 md:pt-24 lg:px-16 lg:pb-10 lg:pt-32;
   }
   .base-img-top {
     @apply w-full max-w-[1500px] flex-grow items-center md:mt-4;

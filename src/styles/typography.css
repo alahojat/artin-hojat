@@ -9,7 +9,6 @@
     font-style: normal;
     font-display: swap;
   }
-
   @font-face {
     font-family: "Zodiak";
     src: url("/fonts/Zodiak-Bold.woff2") format("woff2");
@@ -45,7 +44,6 @@
       @apply text-snow;
     }
   }
-
   .article-heading {
     @apply sm:subheading-alt-sm md:subheading-alt-lg pt-2 text-4xl text-steel sm:my-2 md:mb-6 lg:mb-8;
     &.article-heading-light {
@@ -103,7 +101,6 @@
   .active {
     @apply underline md:text-midnight;
   }
-
   .material-symbols-outlined {
     @apply text-5xl;
   }

@@ -1,10 +1,11 @@
+import { NavLink } from "react-router-dom";
+import { FaLongArrowAltRight } from "react-icons/fa";
 import { ContactForm } from "../components/ContactForm";
 import { PartnersBanner } from "../components/PartnersBanner";
-import { FaLongArrowAltRight } from "react-icons/fa";
 import melwin from "/melwin-pantzar.png";
 import artinhojat4 from "/artin-hojat-4.jpg";
 import dunk from "/dunk.jpg";
-import { NavLink } from "react-router-dom";
+
 import { scrollToTop } from "../utils/scrollToTop";
 
 export const Home = () => {

@@ -36,11 +36,6 @@ export const ContactForm = () => {
     { setSubmitting, resetForm }: FormikHelpers<FormValues>,
   ): Promise<void> => {
     setSubmitting(true);
-
-    console.log(
-      "EmailJS Public Key (from env):",
-      import.meta.env.VITE_EMAILJS_PUBLIC_KEY,
-    );
     try {
       await emailjs.send(
         "contact_service",
@@ -70,7 +65,6 @@ export const ContactForm = () => {
         <Form>
           <fieldset className="col">
             <legend className="sr-only">Get in touch</legend>
-
             <label className="label" htmlFor="user_name">
               Name
             </label>
@@ -80,14 +74,16 @@ export const ContactForm = () => {
                 name="user_name"
                 placeholder="Your Name"
                 className="input"
+                aria-describedby="user_name_error"
               />
-              <ErrorMessage
-                name="user_name"
-                component="p"
-                className="error-text"
-              />
+              <div id="user_name_error" aria-live="assertive" role="alert">
+                <ErrorMessage
+                  name="user_name"
+                  component="p"
+                  className="error-text"
+                />
+              </div>
             </div>
-
             <label className="label" htmlFor="user_email">
               Email
             </label>
@@ -98,14 +94,16 @@ export const ContactForm = () => {
                 type="email"
                 placeholder="Your Email"
                 className="input"
+                aria-describedby="user_email_error"
               />
-              <ErrorMessage
-                name="user_email"
-                component="p"
-                className="error-text"
-              />
+              <div id="user_email_error" aria-live="assertive" role="alert">
+                <ErrorMessage
+                  name="user_email"
+                  component="p"
+                  className="error-text"
+                />
+              </div>
             </div>
-
             <label className="label" htmlFor="message">
               Message
             </label>
@@ -116,23 +114,31 @@ export const ContactForm = () => {
                 name="message"
                 placeholder="Type your message"
                 className="textarea"
+                aria-describedby="message_error"
               />
-              <ErrorMessage
-                name="message"
-                component="p"
-                className="error-text text-wrap"
-              />
+              <div id="message_error" aria-live="assertive" role="alert">
+                <ErrorMessage
+                  name="message"
+                  component="p"
+                  className="error-text text-wrap"
+                />
+              </div>
             </div>
-
             <div className="row items-center justify-center">
               <button
                 className="button button-secondary"
                 type="button"
                 onClick={() => resetForm()}
+                aria-label="Clear all fields"
               >
                 Clear
               </button>
-              <button className="button" type="submit" disabled={isSubmitting}>
+              <button
+                className="button"
+                type="submit"
+                disabled={isSubmitting}
+                aria-label="Submit your message"
+              >
                 {isSubmitting ? "Sending..." : "Send"}
               </button>
             </div>
