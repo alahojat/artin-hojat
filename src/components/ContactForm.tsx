@@ -36,6 +36,11 @@ export const ContactForm = () => {
     { setSubmitting, resetForm }: FormikHelpers<FormValues>,
   ): Promise<void> => {
     setSubmitting(true);
+
+    console.log(
+      "EmailJS Public Key (from env):",
+      import.meta.env.VITE_EMAILJS_PUBLIC_KEY,
+    );
     try {
       await emailjs.send(
         "contact_service",
