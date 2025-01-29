@@ -24,14 +24,14 @@ export const Menu = () => {
   return (
     <>
       <div className="col z-20 w-screen items-center bg-snow md:fixed md:h-12">
-        <header className="fixed z-20 w-full max-w-[1500px] sm:absolute sm:left-0 sm:top-0 md:fixed md:left-1/2 md:flex md:h-12 md:-translate-x-1/2 md:items-center md:justify-between md:gap-12 md:px-12 md:py-2">
+        <header className="header-container">
           <section className="mr-5">
-            <div className="row left-0 top-0 w-full items-center justify-between sm:mt-4 md:fixed md:mt-0">
+            <div className="logo-container">
               <a href="/">
                 <img
                   src={logo}
                   alt={"artin hojat logo"}
-                  className="cursor-pointer justify-start sm:ml-6 sm:mt-2 sm:h-16 sm:w-16 md:h-10 md:w-10 lg:ml-10"
+                  className="logo"
                   aria-label="Return to home"
                 />
               </a>
@@ -50,15 +50,12 @@ export const Menu = () => {
             </div>
 
             {menuIsOpen && (
-              <div
-                className="fixed inset-0 z-10 bg-steel bg-opacity-90"
-                onClick={toggleMenu}
-              ></div>
+              <div className="menu-overlay" onClick={toggleMenu}></div>
             )}
           </section>
 
           <nav
-            className={`col fixed right-0 top-0 h-full w-full transform ${
+            className={`mobile-nav ${
               menuIsOpen ? "translate-x-0" : "translate-x-full"
             } z-20 transition-transform duration-300 md:static md:h-auto md:w-full md:translate-x-0 md:flex-row md:items-center md:justify-between`}
           >
@@ -66,7 +63,7 @@ export const Menu = () => {
               <div className="orange-circle" onClick={toggleMenu}></div>
             </div>
 
-            <ul className="menu overflow-x-auto p-4 sm:mt-10 sm:text-right md:mt-0 md:flex md:flex-wrap md:items-end md:gap-4 md:overflow-visible md:text-right lg:gap-10 lg:hover:text-midnight">
+            <ul className="nav-menu">
               <li>
                 <NavLink
                   to="/articles"
