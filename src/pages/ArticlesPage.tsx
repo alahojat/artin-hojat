@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useCallback } from "react";
 import { useLoaderData } from "react-router-dom";
 import Pagination from "rc-pagination";
 import { IArticle, IArticlesResponse } from "../models/IArticles";
@@ -8,24 +8,27 @@ import { scrollToTop } from "../utils/scrollToTop";
 export const ArticlesPage = () => {
   const articles = useLoaderData() as IArticlesResponse;
   const [searchText, setSearchText] = useState<string>("");
-  const [filteredArticles, setFilteredArticles] =
-    useState<IArticle[]>(articles);
+  const [debouncedSearch, setDebouncedSearch] = useState<string>("");
   const [pageIndex, setPageIndex] = useState(1);
   const articlesPerPage = 8;
 
-  const handleSearch = () => {
-    const filtered = articles.filter((article: IArticle) =>
-      article.title.rendered.toLowerCase().includes(searchText.toLowerCase()),
-    );
-    setFilteredArticles(filtered);
-    setPageIndex(1);
-  };
+  const debounceSearch = useCallback(() => {
+    let timer: NodeJS.Timeout;
+    return (value: string) => {
+      clearTimeout(timer);
+      timer = setTimeout(() => {
+        setDebouncedSearch(value);
+      }, 500);
+    };
+  }, []);
 
-  const clearSearch = () => {
-    setSearchText("");
-    setFilteredArticles(articles);
-    setPageIndex(1);
-  };
+  const handleSearchChange = debounceSearch();
+
+  const filteredArticles = articles.filter((article: IArticle) =>
+    article.title.rendered
+      .toLowerCase()
+      .includes(debouncedSearch.toLowerCase()),
+  );
 
   const handlePageChange = (page: number) => {
     setPageIndex(page);
@@ -41,29 +44,24 @@ export const ArticlesPage = () => {
 
   return (
     <>
-      <div className="base-container bg-ice">
+      <div className="base-container flex-grow bg-ice">
         <section className="base">
           <h2 className="subheading mt-0">The art:in science</h2>
           <fieldset className="md:row mb-0 sm:mt-6 md:items-center lg:mt-6 lg:items-start">
             <input
               className="input"
-              type="text"
-              value={searchText}
+              type="search"
               placeholder="Find an article"
-              onChange={(e) => setSearchText(e.target.value)}
+              value={searchText}
+              onChange={(e) => {
+                const value = e.target.value;
+                setSearchText(value);
+                handleSearchChange(value);
+                setPageIndex(1);
+              }}
             />
-            <div className="row">
-              <button
-                className="button button-secondary-dark"
-                onClick={clearSearch}
-              >
-                Clear
-              </button>
-              <button className="button" onClick={handleSearch}>
-                Search
-              </button>
-            </div>
           </fieldset>
+
           {filteredArticles.length === 0 ? (
             <p className="body mt-6 text-center">
               No articles were found, please try using another word!
