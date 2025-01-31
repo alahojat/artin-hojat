@@ -1,11 +1,12 @@
 import { useNavigate } from "react-router-dom";
+import { scrollToTop } from "../utils/scrollToTop";
 
 export const GoBackBtn = () => {
   const navigate = useNavigate();
 
   const handleGoBack = () => {
     navigate(-1);
-    scroll(0, 0);
+    scrollToTop("auto");
   };
 
   return (
