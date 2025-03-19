@@ -128,3 +128,5 @@ npm run dev
 | ![Player](src/assets/result/final-mob/player-mob.jpg) | ![Contact](src/assets/result/final-mob/contact-mob.jpg)   | ![Merits](src/assets/result/final-mob/merits-mob.jpg)                 |
 | About                                                 |                                                           |                                                                       |
 | ![About](src/assets/result/final-mob/about-mob.jpg)   |                                                           |                                                                       |
+
+_This project is licensed under an "All Rights Reserved" license. Forking, modifying, or redistributing this code is not allowed._
