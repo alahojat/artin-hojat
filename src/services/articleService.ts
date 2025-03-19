@@ -1,9 +1,8 @@
 import { IArticle, IArticlesResponse, IMedia } from "../models/IArticles";
 import { get } from "./serviceBase";
 
-const BASE_URL = "https://articlesartinhojat.com/wp-json/wp/v2/posts";
-
-const MEDIA_URL = "https://articlesartinhojat.com/wp-json/wp/v2/media";
+const BASE_URL = import.meta.env.VITE_BASE_URL;
+const MEDIA_URL = import.meta.env.VITE_MEDIA_URL;
 
 // Fetch all articles
 export const getArticles = async (): Promise<IArticlesResponse> => {
