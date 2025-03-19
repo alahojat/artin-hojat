@@ -56,12 +56,17 @@ export default {
       animation: {
         "marquee-start": "marquee-start 50s linear infinite",
         "slide-horizontal": "slide-horizontal 20s linear infinite",
-        scroll: "scroll 30s linear infinite",
+        scroll: "scroll 20s linear infinite",
+        marquee: "marquee 30s linear infinite",
       },
       keyframes: {
         "marquee-start": {
           "0%": { transform: "translateX(0)" },
           "100%": { transform: "translateX(-90%)" },
+        },
+        marquee: {
+          "0%": { transform: "translateX(0)" },
+          "100%": { transform: "translateX(-50%)" },
         },
         "slide-horizontal": {
           "0%": { transform: "translateX(100%)" },
@@ -69,7 +74,7 @@ export default {
         },
         scroll: {
           "0%": { transform: "translateX(0)" },
-          "100%": { transform: "translateX(-100%)" },
+          "100%": { transform: "translateX(-50%)" },
         },
       },
     },
