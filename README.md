@@ -112,19 +112,19 @@ npm run dev
 | **Title**                                             | **Title**                                                 | **Title**                                                             |
 | ----------------------------------------------------- | --------------------------------------------------------- | --------------------------------------------------------------------- |
 | Home                                                  | Articles                                                  | Single article                                                        |
-| ![Home](src/assets/result/final-tab/home-tab.png)     | ![Articles](src/assets/result/final-tab/articles-tab.png) | ![Single article](src/assets/result/final-tab/single-article-tab.png) |
+| ![Home](src/assets/result/final-tab/home-tab.jpg)     | ![Articles](src/assets/result/final-tab/articles-tab.jpg) | ![Single article](src/assets/result/final-tab/single-article-tab.jpg) |
 | Player                                                | Contact                                                   | Merits                                                                |
-| ![Player](src/assets/result/final-tab/player-tab.png) | ![Contact](src/assets/result/final-tab/contact-tab.png)   | ![Merits](src/assets/result/final-tab/merits-tab.png)                 |
+| ![Player](src/assets/result/final-tab/player-tab.jpg) | ![Contact](src/assets/result/final-tab/contact-tab.jpg)   | ![Merits](src/assets/result/final-tab/merits-tab.jpg)                 |
 | About                                                 |                                                           |                                                                       |
-| ![About](src/assets/result/final-tab/about-tab.png)   |                                                           |                                                                       |
+| ![About](src/assets/result/final-tab/about-tab.jpg)   |                                                           |                                                                       |
 
 ## Final result in mobile
 
 | **Title**                                             | **Title**                                                 | **Title**                                                             |
 | ----------------------------------------------------- | --------------------------------------------------------- | --------------------------------------------------------------------- |
 | Home                                                  | Articles                                                  | Single article                                                        |
-| ![Home](src/assets/result/final-mob/home-mob.png)     | ![Articles](src/assets/result/final-mob/articles-mob.png) | ![Single article](src/assets/result/final-mob/single-article-mob.png) |
+| ![Home](src/assets/result/final-mob/home-mob.jpg)     | ![Articles](src/assets/result/final-mob/articles-mob.jpg) | ![Single article](src/assets/result/final-mob/single-article-mob.jpg) |
 | Player                                                | Contact                                                   | Merits                                                                |
-| ![Player](src/assets/result/final-mob/player-mob.png) | ![Contact](src/assets/result/final-mob/contact-mob.png)   | ![Merits](src/assets/result/final-mob/merits-mob.png)                 |
+| ![Player](src/assets/result/final-mob/player-mob.jpg) | ![Contact](src/assets/result/final-mob/contact-mob.jpg)   | ![Merits](src/assets/result/final-mob/merits-mob.jpg)                 |
 | About                                                 |                                                           |                                                                       |
-| ![About](src/assets/result/final-mob/about-mob.png)   |                                                           |                                                                       |
+| ![About](src/assets/result/final-mob/about-mob.jpg)   |                                                           |                                                                       |
