@@ -8,7 +8,7 @@ import circleLogo from "/site-logo/artin-hojat-circle.svg";
 export const Footer = () => {
   return (
     <footer className="col bg-purple sm:h-[450px] md:h-[350px] lg:h-[400px] lg:w-full lg:pb-4">
-      <div className="bg-purple flex-shrink-0">
+      <div className="flex-shrink-0 bg-purple">
         <ScrollingBanner />
       </div>
 
@@ -96,6 +96,7 @@ export const Footer = () => {
         <p className="copyright">
           Copyright &copy; Artin Hojat 2025 All rights reserved
         </p>
+        <p className="copyright">This website does not use cookies.</p>
       </div>
     </footer>
   );
